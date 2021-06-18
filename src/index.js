@@ -1,1 +1,2 @@
-console.log('object');
+console.log('ojejku dziala');
+import './sass/main.scss';

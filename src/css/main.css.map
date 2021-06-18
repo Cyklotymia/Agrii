@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,IAAI;CACzB",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/_page.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

@@ -1,7 +1,8 @@
 const path = require("path")
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin= require('mini-css-extract-plugin')
+const MiniCssExtractPlugin= require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = {
@@ -11,7 +12,7 @@ module.exports = {
     },
     output: {
         filename: "js/[name].js",
-        path: path.resolve(__dirname, '../', "developFiles")
+        path: path.resolve(__dirname, '../', "productionFiles")
     },
 
     devServer: {
@@ -19,13 +20,21 @@ module.exports = {
       },
 
     plugins: [
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename:'[name]-[contenthash:4].css'
+        }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: "Development",
+            title: "Agrii",
             template:"./html/main.html"
 
-        })
+        }),
+        new CopyPlugin({
+          patterns: [
+            { from: "public/images", to: "images" },
+            // { from: "other", to: "public" },
+          ],
+        }),
     ],
     module:{
         rules:[
@@ -36,7 +45,29 @@ module.exports = {
               {
                 test: /\.(sass|scss)$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-              }
+              },
+              {
+                test: /\.(jpg|png|svg|gif|jpeg)$/,
+                loader: 'file-loader',
+                options:{
+                    name:'[name][contenthash:4].[ext]',
+                    outputPath:'images',
+                    
+                }
+              },
+              {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                options: {
+                  presets: [
+                    ["@babel/preset-env", { useBuiltIns: 'usage', corejs: "2.0.0" }]
+                  ],
+                  plugins: [
+                    "@babel/plugin-proposal-class-properties"
+                  ]
+                }
+              },
         ]
     }
 }

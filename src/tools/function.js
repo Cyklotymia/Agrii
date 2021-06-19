@@ -1,9 +1,9 @@
 import photo from '../images/photo.png';
-    // export default (tag) => {
-    //     const img = document.createElement('img');
-    //     img.src = photo;
-    //     document.querySelector(tag).appendChild(img)
-    //   }
+    export const addPhoto = (tag) => {
+        const img = document.createElement('img');
+        img.src = photo;
+        document.querySelector(tag).appendChild(img)
+      }
       
     export default class {
       constructor() {

@@ -1,1 +1,7 @@
-@import'./page';
+@import'./mixins';
+@import'./variables';
+@import'./fonts';
+h1{
+    font-family: $font-family-F;
+    font-size: 80px;
+}

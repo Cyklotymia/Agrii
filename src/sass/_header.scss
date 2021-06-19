@@ -1,0 +1,138 @@
+.header {
+    width: 100vw;
+    position: fixed;
+
+    .nav {
+        @include flexParent(row, nowrap, center, center);
+        width: 100%;
+        padding: 10px;
+        position: relative;
+        height: 72px;
+
+        .hamburger {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+
+            .hamburger__container {
+                @include positionCenter();
+                width: 30%;
+                height: 30%;
+
+                .hamburger__element {
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: black;
+                }
+                .hamburger__element:nth-child(1){
+                    top: 10%;
+                }
+                .hamburger__element:nth-child(2){
+                    top: 50%;
+                }
+                .hamburger__element:nth-child(3){
+                    top: 90%;
+                }
+            }
+        }
+
+        .logo {
+            .logo__link {
+                display: block;
+                width: 125px;
+                // .logo__img {
+                    
+                // }
+            }
+        }
+
+        .menu {
+            display: none;
+
+            .menu__list {
+                .menu__list-element {
+                    .menu__list-element-text {}
+
+                    .icon-icon_04 {}
+                }
+            }
+        }
+
+        .search {
+            display: none;
+
+            .searchMob__input {}
+
+            .search__icon-container {
+                .icon-icon_01 {}
+            }
+        }
+
+        .basket {
+            display: none;
+
+            .basket__link {
+                .basket__icon-container {
+                    .icon-icon_02 {}
+                }
+
+                .basket__text-container {
+                    .basket__text {}
+
+                    .basket__icon-container {
+                        .icon-icon_04--rotate {}
+                    }
+                }
+            }
+        }
+
+        .secound-logo {
+            display: none;
+
+            .secound-logo__link {
+                .secound-logo__img {}
+            }
+        }
+
+    }
+
+    .searchMob {
+        @include flexParent(row,nowrap,center,center);
+        background-color:#f3f3f3;
+        height: 57px;
+        width: 100%;
+        padding: 5px;
+        
+        .searchMob__input {
+            width: 100%;
+            height: 100%;
+            padding: 0 10px 0 15px;
+            font-family: $font-family-F;
+            border: none;
+            font-weight: 400;
+            color: black;
+            border-bottom: 1px solid #dddee2
+            
+            
+        }
+
+        .searchMob__icon-container {
+            height: 45px;
+            width: 45px;
+            min-width: 45px;
+            min-height: 45px;
+            background-color: $main-color;
+            cursor: pointer;
+            .icon-icon_01 {
+                color: white;
+                font-size: 20px;
+                
+            }
+        }
+    }
+}

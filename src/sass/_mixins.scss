@@ -7,3 +7,8 @@
 
     }
 }
+@mixin position($position,$left,$top){
+    position:$position;
+    left:$left;
+    top:$top;
+}

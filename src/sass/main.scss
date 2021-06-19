@@ -1,7 +1,12 @@
-@import'./mixins';
 @import'./variables';
+@import'./variables_paulus';
+@import'./paulus';
+@import'./mixins';
 @import'./fonts';
 h1{
     font-family: $font-family-F;
     font-size: 80px;
+}
+.icon-icon_01{
+    color: red;
 }

@@ -2,12 +2,59 @@
     width: 100vw;
     position: fixed;
 
+    .hamburger__popup {
+        @include position(fixed,-100vw, 73px);
+        height: 100vh;
+        min-width: 200px;
+        width: calc(100vw - 50px);
+        background-color: rgb(255, 255, 255);
+        border-right: 1px solid #dddee2;
+        opacity: 0;
+        transition: .5s;
+
+        .hamburger__popup-list {
+
+            // list-style: none;
+            .hamburger__popup-element {
+                @include flexParent(row, nowrap, flex-start, center);
+                width: 100%;
+                padding: 15px;
+                border-bottom: 1px solid #dddee2;
+                cursor: pointer;
+
+
+                .hamburger__popup-element-text {
+                    border-right: 1px solid #dddee2;
+                    width: 100%;
+                    font-family: $font-family-F;
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+
+                .hamburger__popup-element-icon {
+                    padding: 0 0 0 10px;
+                    @include flexParent(row, nowrap, center, center);
+                    // .icon-icon_05{
+
+
+
+                    // }
+                }
+            }
+        }
+    }
+    .hamburger__popup.active{
+        @include position(fixed, 0, 73px);
+        opacity:1;
+    }
+
     .nav {
         @include flexParent(row, nowrap, center, center);
         width: 100%;
         padding: 10px;
         position: relative;
         height: 72px;
+
 
         .hamburger {
             position: absolute;
@@ -28,34 +75,41 @@
                     width: 100%;
                     height: 2px;
                     background-color: black;
-                    transition: top .1s linear 
+                    transition: top .1s linear
                 }
-                .hamburger__element:nth-child(1){
+
+                .hamburger__element:nth-child(1) {
                     top: 10%;
                 }
-                .hamburger__element:nth-child(2){
+
+                .hamburger__element:nth-child(2) {
                     top: 50%;
-                    
+
                 }
-                .hamburger__element:nth-child(3){
+
+                .hamburger__element:nth-child(3) {
                     top: 90%;
                 }
             }
-        }
-        .hamburger.active{
-            .hamburger__element:nth-child(1){
-                @include positionCenter();
-                transform: translate(-50%,-50%) rotate(-45deg);
 
-                
-            }
-            .hamburger__element:nth-child(2){
-                opacity:0;
-            }
-            .hamburger__element:nth-child(3){
+        }
+
+        .hamburger.active {
+            .hamburger__element:nth-child(1) {
                 @include positionCenter();
-                transform: translate(-50%,-50%) rotate(45deg);
-                
+                transform: translate(-50%, -50%) rotate(-45deg);
+
+
+            }
+
+            .hamburger__element:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger__element:nth-child(3) {
+                @include positionCenter();
+                transform: translate(-50%, -50%) rotate(45deg);
+
             }
         }
 
@@ -64,7 +118,7 @@
                 display: block;
                 width: 125px;
                 // .logo__img {
-                    
+
                 // }
             }
         }
@@ -120,12 +174,13 @@
     }
 
     .searchMob {
-        @include flexParent(row,nowrap,center,center);
-        background-color:#f3f3f3;
+        @include flexParent(row, nowrap, center, center);
+        background-color: #f3f3f3;
         height: 57px;
         width: 100%;
         padding: 5px;
-        
+        border-top: 1px solid #dddee2;
+
         .searchMob__input {
             width: 100%;
             height: 100%;
@@ -134,9 +189,10 @@
             border: none;
             font-weight: 400;
             color: black;
-            border-bottom: 1px solid #dddee2
-            
-            
+            border-bottom: 1px solid #dddee2;
+
+
+
         }
 
         .searchMob__icon-container {
@@ -146,10 +202,11 @@
             min-height: 45px;
             background-color: $main-color;
             cursor: pointer;
+
             .icon-icon_01 {
                 color: white;
                 font-size: 20px;
-                
+
             }
         }
     }

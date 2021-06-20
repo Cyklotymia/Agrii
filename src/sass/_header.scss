@@ -28,16 +28,34 @@
                     width: 100%;
                     height: 2px;
                     background-color: black;
+                    transition: top .1s linear 
                 }
                 .hamburger__element:nth-child(1){
                     top: 10%;
                 }
                 .hamburger__element:nth-child(2){
                     top: 50%;
+                    
                 }
                 .hamburger__element:nth-child(3){
                     top: 90%;
                 }
+            }
+        }
+        .hamburger.active{
+            .hamburger__element:nth-child(1){
+                @include positionCenter();
+                transform: translate(-50%,-50%) rotate(-45deg);
+
+                
+            }
+            .hamburger__element:nth-child(2){
+                opacity:0;
+            }
+            .hamburger__element:nth-child(3){
+                @include positionCenter();
+                transform: translate(-50%,-50%) rotate(45deg);
+                
             }
         }
 

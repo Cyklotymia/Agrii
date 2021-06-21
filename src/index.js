@@ -1,10 +1,8 @@
 
 import './sass/main.scss';
 import Hamburger from './tools/Hamburger.js'
+import hambList from './tools/variables'
 
 const hamburger = new Hamburger();
-let section="header";
-let elementsArr=["Produkty", "Firma", "Nasze marki"];
-let elementClass="hamburger__popup-element";
-let iconClass="icon-icon_05";
-hamburger.contructor(section,elementsArr,elementClass,iconClass);
+let hambClass="hamburger"
+hamburger.contructor(hambList,hambClass); 

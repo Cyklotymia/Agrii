@@ -3,7 +3,7 @@
     position: fixed;
 
     .hamburger__popup {
-        @include position(fixed,-100vw, 73px);
+        @include position(fixed, -100vw, 73px);
         height: 100vh;
         min-width: 200px;
         width: calc(100vw - 50px);
@@ -29,6 +29,7 @@
                     font-family: $font-family-F;
                     font-weight: 400;
                     font-size: 15px;
+                    margin-right: 5px;
                 }
 
                 .hamburger__popup-element-icon {
@@ -36,16 +37,58 @@
                     @include flexParent(row, nowrap, center, center);
                     // .icon-icon_05{
 
-
+                    //     margin-left: 5px
 
                     // }
                 }
             }
         }
     }
-    .hamburger__popup.active{
+
+    .hamburger__popup.active {
         @include position(fixed, 0, 73px);
-        opacity:1;
+        opacity: 1;
+    }
+
+    .hamburger__popup--sub {
+        // @include position(fixed, 0, 73px);
+        // opacity: 1;
+
+        .hamburger__sub-popup-controler {
+            background-color: #f8f8f8;
+            font-family: $font-family-F;
+            font-weight: $weight-medium;
+            font-size: 15px;
+            @include flexParent(row, nowrap, flex-start, center);
+            height: 55px;
+            padding: 0 10px;
+
+            .hamburger__sub-popup-back {
+                @include flexParent(row, nowrap, flex-start, center);
+                border-right: 1px solid #dddee2;
+                height: 100%;
+                cursor: pointer;
+
+                .icon-icon_05--rotate {
+                    display: block;
+                    transform: rotate(-180deg);
+                }
+
+                .hamburger__sub-popup-text {
+                    height: 100%;
+                    line-height: 55px;
+                    padding: 0px 15px;
+                }
+                
+            }
+            .hamburger__sub-popup-text-header {
+                    padding-left: 10px;
+                }
+        }
+    }
+    .hamburger__popup--sub.active {
+        @include position(fixed, 0, 73px);
+        opacity: 1;
     }
 
     .nav {

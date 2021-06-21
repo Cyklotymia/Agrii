@@ -1,12 +1,12 @@
 export default class GeneratePopup {
-    contructor(hambList) {
-        this.hambList = hambList;
-        this.container = document.querySelector(`.${this.hambList.ulClass}`)
+    contructor(configList) {
+        this.configList = configList;
+        this.container = document.querySelector(`.${this.configList.ulClass}`)
        
         this.GetInfo()
     }
     createElement = (elementTag, elementClass, insideElements = null, insideElementsClass = null, text= null) => {
-        let element = document.createElement(elementTag)
+        const element = document.createElement(elementTag)
         element.classList.add(elementClass)
         
         if (insideElements) {
@@ -23,34 +23,31 @@ export default class GeneratePopup {
             
         }
         this.container.appendChild(element)
-        this.GenerateList()
+        
     }
     GetInfo = () => {
 
-        this.hambList.elements.forEach((e, index) => {
+        this.configList.elements.forEach((configElements) => {
             let insideElements = []
             let insideElementsClass = []
             let text=[]
-            e.inside.forEach(insideElement => {
+            configElements.inside.forEach(insideElement => {
 
                 insideElements.push(insideElement.tag)
-                // console.log(insideElements);
+               
                 insideElementsClass.push(insideElement.class)
-                // console.log(insideElement.textContent);
+                
                 text.push(insideElement.textContent)
 
 
             })
-            // console.log(insideElements, insideElementsClass);
-            console.log(text);
-            this.createElement(e.tag, e.itemClass, insideElements, insideElementsClass,text)
+            
+           
+            this.createElement(configElements.tag, configElements.itemClass, insideElements, insideElementsClass,text)
 
         });
 
 
     }
-    // GenerateList = () => {
-    //     // console.log('object');
-    // }
-
+    
 }

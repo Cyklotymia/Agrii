@@ -8,7 +8,7 @@ const hambList = {
             itemClass: "hamburger__popup-element",
             makeSub: {
                 flag: "true",
-                class: " hamburger__popup--sub",
+                class: "hamburger__popup--sub",
             },
             inside: [{
                     tag: "span",
@@ -29,7 +29,7 @@ const hambList = {
             itemClass: "hamburger__popup-element",
             makeSub: {
                 flag: "true",
-                class: " hamburger__popup--sub",
+                class: "hamburger__popup--sub",
             },
             inside: [{
                     tag: "span",
@@ -49,7 +49,7 @@ const hambList = {
             itemClass: "hamburger__popup-element",
             makeSub: {
                 flag: "true",
-                class: " hamburger__popup--sub",
+                class: "hamburger__popup--sub",
             },
             inside: [{
                     tag: "span",

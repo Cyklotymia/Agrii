@@ -5,35 +5,34 @@ export default class GeneratePopup {
         this.container = document.querySelector(`.${this.configList.ulClass}`)
         this.GetInfo()
     }
-    createElement = (elementTag, elementClass, insideElements = null, insideElementsClass = null, text = null, classOfSublist = null) => {
-        const element = document.createElement(elementTag)
-        element.classList.add(elementClass)
-        if (classOfSublist) {
-            element.addEventListener("click", (e) => {
+    createElement = (elementTag, elementClass, insideElements = null, /*insideElementsClass = null, text = null,*/ sublist = null) => {
+        const parentElement = document.createElement(elementTag)
+        parentElement.classList.add(elementClass)
+        console.log(sublist.length)
+        if (sublist.sublistKey && sublist.class && sublist.textContent) {
+            parentElement.dataset.sublist = sublist.sublistKey
+            this.configureSublist(sublist.sublistKey, sublist.class, sublist.textContent)
+            //console.log(parentElement);
+            parentElement.addEventListener("click", (e) => {
                 this.showSublist(e)
             })
         }
-        if (insideElements) {
-            insideElements.forEach((e, index) => {
+        if (insideElements.length) {
+            insideElements.forEach((insideElementConfig) => {
 
-                let insideElement = document.createElement(e)
-                insideElement.classList.add(insideElementsClass[index])
-                element.appendChild(insideElement)
-                if (text[index]) {
-
-                    insideElement.textContent = text[index]
-                    if (text[index].includes(" ")) {
-                        let repairString = text[index].replace(" ", "_")
-                        element.dataset.sublist = repairString
-                    } else {
-                        element.dataset.sublist = text[index]
-                    }
-
+                let insideElement = document.createElement(insideElementConfig.tag)
+                insideElement.classList.add(insideElementConfig.class)
+                insideElement.textContent = insideElementConfig.textContent ?? ''
+                if(insideElement.tag === 'a' &&  insideElement.href){
+                    insideElement.href = insideElement.href
                 }
+                insideElement.textContent = insideElementConfig.textContent ?? ''
+
+                parentElement.appendChild(insideElement)
             })
 
         }
-        this.container.appendChild(element)
+        this.container.appendChild(parentElement)
 
     }
     GetInfo = () => {
@@ -44,16 +43,16 @@ export default class GeneratePopup {
             let text = []
             let classOfSublist = null
 
-            configElements.inside.forEach(insideElement => {
+            // configElements.inside.forEach(insideElement => {
 
-                insideElements.push(insideElement.tag)
+            //     insideElements.push(insideElement.tag)
 
-                insideElementsClass.push(insideElement.class)
+            //     insideElementsClass.push(insideElement.class)
 
-                text.push(insideElement.textContent)
+            //     text.push(insideElement.textContent)
+            
 
-
-            })
+            // })
             if (configElements.makeSub) {
                 // const classOfIndividualSublist=`${configElements.makeSub.class}--${text[0]}`
 
@@ -61,8 +60,8 @@ export default class GeneratePopup {
 
 
             }
-            this.configureSublist(classOfSublist, text, index)
-            this.createElement(configElements.tag, configElements.itemClass, insideElements, insideElementsClass, text, classOfSublist)
+            // this.configureSublist(classOfSublist, text, index)
+            this.createElement(configElements.tag, configElements.itemClass, configElements.inside, configElements.makeSub ?? null)
 
             // this.addListenersForElements(itemClass, index)
 
@@ -71,46 +70,30 @@ export default class GeneratePopup {
 
 
     }
-    configureSublist = (classOfSublist = null, textArr = null, index) => {
+    configureSublist = ( dataKey, classOfSublist = null, text = null) => {
 
         if (!classOfSublist) {
             return
         }
 
 
-        const sublistArr = document.querySelectorAll(`.${classOfSublist}`)
-        const elementAboveList = document.querySelectorAll(".js__subpopup-text")
-        textArr.forEach(text => {
-            if (text) {
-                if (text.includes(" ")) {
-                    
-                    let repairString = text.replace(" ", "_")
-                    
-                    sublistArr[index].dataset.sublist = repairString
-                   
-                } else {
-                    sublistArr[index].dataset.sublist = text
-                }
-                
-                if (elementAboveList.length) {
-                    elementAboveList[index].textContent = text
-                   
-                }
-            }
-        })
-
-
-
+        const sublist = document.querySelector(`[data-sublist=${dataKey}]`)
+        const elementAboveList = sublist.querySelector(".js__subpopup-text")
+        if( elementAboveList){
+            elementAboveList.textContent = text
+        }
     }
 
 
     showSublist = (e) => {
         const categoryToOpen = e.target.closest("[data-sublist]")
-
-        let connectedElements = document.querySelectorAll(`[data-sublist=${categoryToOpen.dataset.sublist}]`)
-        connectedElements.forEach(element=>{
-            element.classList.add("active") // od razu mowie ze daje i tu i tu activ nie dlatego ze jestem zjebana tylko dlatego, ze przy kliku ma jeszcze li kolor zmieniac na chwile na niebieski ale jeszcze tej klasy w css nie dodalam
-        })
+        if(categoryToOpen){
+            let connectedElements = document.querySelectorAll(`[data-sublist=${categoryToOpen.dataset.sublist}]`)
+            connectedElements.forEach(element=>{
+                element.classList.add("active") // od razu mowie ze daje i tu i tu activ nie dlatego ze jestem zjebana tylko dlatego, ze przy kliku ma jeszcze li kolor zmieniac na chwile na niebieski ale jeszcze tej klasy w css nie dodalam
+            })
+        }
+        
 
         
 

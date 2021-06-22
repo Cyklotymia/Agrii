@@ -9,6 +9,8 @@ const hambList = {
             makeSub: {
                 flag: "true",
                 class: "hamburger__popup--sub",
+                textContent: "Produkty",
+                sublistKey: "produkty",
             },
             inside: [{
                     tag: "span",
@@ -30,6 +32,8 @@ const hambList = {
             makeSub: {
                 flag: "true",
                 class: "hamburger__popup--sub",
+                textContent: "Produkty2",
+                sublistKey: "produkty2"
             },
             inside: [{
                     tag: "span",
@@ -42,6 +46,7 @@ const hambList = {
                     flag: true
 
                 }
+
             ],
         },
         {
@@ -50,6 +55,8 @@ const hambList = {
             makeSub: {
                 flag: "true",
                 class: "hamburger__popup--sub",
+                textContent: "Produkty3",
+                sublistKey: "produkty3"
             },
             inside: [{
                     tag: "span",

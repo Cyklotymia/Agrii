@@ -360,6 +360,7 @@
                     @include flexParent(row, nowrap, flex-start, center);
                     color: black;
                     text-decoration: none;
+                    margin: 0 20px;
 
                     .basket__icon-container {
                         padding-right: 5px;
@@ -372,6 +373,7 @@
                     .basket__text-container {
                         @include flexParent(row, nowrap, flex-start, center);
                         white-space: nowrap;
+                        display: none;
 
                         .basket__text {
                             font-family: $font-family-F;
@@ -406,6 +408,7 @@
                     }
 
                     .basket__text-container {
+                        @include flexParent(row, nowrap, flex-start, center);
                         .basket__text {
                             font-size: 15px;
                         }

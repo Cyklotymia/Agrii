@@ -213,6 +213,12 @@
 
             }
         }
+        @media (min-width:1700px) {
+            .logo {
+                width: 170px;
+                min-height: 61px;
+            }
+        }
 
         .menu {
             display: none;
@@ -276,6 +282,20 @@
                 }
             }
         }
+        @media (min-width:1700px) {
+            .menu {
+                margin-left: 50px;
+                .menu__list {
+                    .menu__list-element {
+                        margin: 0 20px;
+                        .menu__list-element-text {
+                            font-size: 16px;
+
+                        }
+                    }
+                }
+            }
+        }
 
         .search {
             display: none;
@@ -315,7 +335,7 @@
 
         @media (min-width:1200px) {
             .search {
-             height: 40px;
+             height: 31px;
                 .search__input {
                     height: 100%;
                 }
@@ -406,6 +426,32 @@
             }
         }
 
+        @media (min-width:1700px) {
+            .basket {
+               margin-left: 100px;
+
+                .basket__link {
+                    .basket__icon-container {
+                        .icon-icon_02 {
+                            font-size: 47px
+                        }
+                    }
+
+                    .basket__text-container {
+                        .basket__text {
+                            font-size: 16px;
+                        }
+
+                        .basket__icon-container {
+                            .icon-icon_04--rotate {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .secound-logo {
             display: none;
         }
@@ -442,6 +488,14 @@
             }
         }
 
+        @media (min-width:1200px) {
+            .secound-logo {
+                .secound-logo__link {
+                    max-width:75px;
+                }
+            }
+        }
+
     }
 
     @media (min-width:770px) {
@@ -461,6 +515,12 @@
     @media(min-width:1200px) {
         .nav {
             height: 86px
+        }
+    }
+
+    @media(min-width:1700px) {
+        .nav {
+            height: 102px
         }
     }
 

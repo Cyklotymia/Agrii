@@ -4,6 +4,7 @@
 
     .hamburger__popup {
         @include position(fixed, -100vw, 73px);
+        min-height: 100vh;
         height: 100vh;
         min-width: 200px;
         width: calc(100vw - 50px);
@@ -11,6 +12,7 @@
         border-right: 1px solid #dddee2;
         opacity: 0;
         transition: .5s;
+        overflow-y:auto;
 
         .hamburger__popup-list {
 
@@ -30,6 +32,12 @@
                     font-weight: 400;
                     font-size: 15px;
                     margin-right: 5px;
+                }
+                .hamburger__popup-element-text--link{
+                    border-right: none;
+                    color: black;
+                    text-decoration: none;
+                    
                 }
 
                 .hamburger__popup-element-icon {
@@ -53,6 +61,7 @@
     .hamburger__popup--sub {
         // @include position(fixed, 0, 73px);
         // opacity: 1;
+        overflow-y:auto ;
 
         .hamburger__sub-popup-controler {
             background-color: #f8f8f8;

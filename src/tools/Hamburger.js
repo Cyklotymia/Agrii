@@ -17,15 +17,28 @@ export default class Hamburger {
 
   addListeners() {
     this.hamburger.addEventListener("click", () => {
+      this.section.querySelectorAll(".hamburger__popup--sub").forEach(subPop=>{
+        subPop.classList.remove("active")
+      })
+      
       this.hamburger.classList.toggle("active")
       this.hambPopUp.classList.toggle("active")
+      
     })
     document.addEventListener("click", (e) => {
 
-      if (!e.target.closest(`.hamburger__popup`) && !e.target.closest(`.${this.hambClass}`)) {
+      if (!e.target.closest(`.hamburger__popup`) && !e.target.closest(`.${this.hambClass}`) && !e.target.closest(`.hamburger__popup--sub`)) {
+        this.section.querySelectorAll(".hamburger__popup--sub").forEach(subPop=>{
+          subPop.classList.remove("active")
+        })
         this.hamburger.classList.remove("active")
         this.hambPopUp.classList.remove("active")
       }
+    })
+    this.section.querySelectorAll(".hamburger__sub-popup-text").forEach(textBack=>{
+      textBack.addEventListener("click",(e)=>{
+        e.target.closest(".hamburger__popup--sub").classList.remove("active")
+      })
     })
 
 

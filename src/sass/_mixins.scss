@@ -2,7 +2,7 @@
     @font-face {
         font-family: "#{$name}";
         font-weight: #{$weight};
-        // src: url("../../public/fonts/#{$file}.#{$format}");
+        
         src: url("../fonts/#{$file}.#{$format}");
 
     }

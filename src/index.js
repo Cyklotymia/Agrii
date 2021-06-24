@@ -8,5 +8,9 @@ const hamburger = new Hamburger();
 let hambClass="hamburger"
 hamburger.contructor(hambList,hambClass); 
 const nav = new DynamicMenu()
+let containerClassforDynamicMenu="menu"
+let buttonsClassForDynamicMenu= "js__dynamicMenu"
+let nameOfDataForDynamicMenu="data-menu"
+nav.contructor(containerClassforDynamicMenu, buttonsClassForDynamicMenu,nameOfDataForDynamicMenu)
 
-nav.contructor("menu")
+// "products","company","our_brands"

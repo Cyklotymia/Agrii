@@ -101,3 +101,30 @@
         }
     }
 }
+
+@media (min-width:1000px) {
+    .menu__popups {
+        @include position(absolute, 0, 83px);
+        .wrapper {
+            .menu__popups-container {
+                .menu__popup-list-container {
+                    width: 23%;
+                   
+                }
+            }
+
+            .menu__popups-container:nth-child(2) {
+
+                .menu__popup-list-container {
+
+                    .menu__popup-list {
+                        padding-left: 0;
+
+                    }
+                }
+            }
+
+           
+        }
+    }
+}

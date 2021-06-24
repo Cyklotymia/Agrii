@@ -1,6 +1,7 @@
 .header {
     width: 100vw;
     position: fixed;
+    background-color: white;
 
     .hamburger__popup {
         @include position(fixed, -100vw, 73px);
@@ -433,7 +434,7 @@
 
         @media (min-width:1700px) {
             .basket {
-               margin-left: 100px;
+               
 
                 .basket__link {
                     .basket__icon-container {

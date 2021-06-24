@@ -5,7 +5,8 @@
 
     .hamburger__popup {
         @include position(fixed, -100vw, 73px);
-        min-height: 100vh;
+        max-height: calc(100vh - 72px);
+        
         height: 100vh;
         min-width: 200px;
         width: calc(100vw - 50px);

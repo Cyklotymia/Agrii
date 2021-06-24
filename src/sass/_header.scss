@@ -101,15 +101,14 @@
         @include flexParent(row, nowrap, center, center);
         width: 100%;
         padding: 10px;
-        position: relative;
+        // position: relative;
         height: 72px;
 
 
         .hamburger {
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 15px;
             width: 50px;
             height: 50px;
             cursor: pointer;

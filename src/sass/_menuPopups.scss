@@ -164,7 +164,7 @@
 
 @media (min-width:1700px) {
     .menu__popups {
-        @include position(absolute, 0, 115px);
+        @include position(absolute, 0, 101px);
 
         .wrapper {
             .menu__popups-container {

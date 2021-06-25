@@ -216,7 +216,7 @@
         }
         @media (min-width:1700px) {
             .logo {
-                width: 170px;
+                min-width: 170px;
                 min-height: 61px;
             }
         }
@@ -288,12 +288,15 @@
         }
         @media (min-width:1700px) {
             .menu {
-                margin-left: 50px;
+                margin-left: 60px;
+                margin-right: 70px;
                 .menu__list {
                     .menu__list-element {
-                        margin: 0 20px;
+                        margin: 0 20px 0 0;
+                        padding: 10px 5px;
                         .menu__list-element-text {
                             font-size: 16px;
+                            margin:0 10px 0 0;
 
                         }
                     }
@@ -346,6 +349,22 @@
                 .search__icon-container {
                     .icon-icon_01 {
                         font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        @media (min-width:1700px) {
+            .search {
+             height: 31px;
+             min-width: 439px;
+             margin:0;
+                .search__input {
+                    height: 100%;
+                }
+                .search__icon-container {
+                    .icon-icon_01 {
+                        font-size: 18px;
                     }
                 }
             }
@@ -435,9 +454,13 @@
 
         @media (min-width:1700px) {
             .basket {
+                margin-left: 70px;
+                width: 185px;
                
 
                 .basket__link {
+                    width: 100%;
+                    margin: 0;
                     .basket__icon-container {
                         .icon-icon_02 {
                             font-size: 47px
@@ -503,6 +526,15 @@
             }
         }
 
+        @media (min-width:1700px) {
+            .secound-logo {
+                margin:0 0;
+                .secound-logo__link {
+                    width:75px;
+                }
+            }
+        }
+
     }
 
     @media (min-width:770px) {
@@ -527,7 +559,7 @@
 
     @media(min-width:1700px) {
         .nav {
-            height: 102px
+            height: 88px
         }
     }
 

@@ -4,9 +4,11 @@ import Hamburger from './tools/Hamburger.js'
 import hambList from './tools/variables'
 import DynamicMenu from './tools/menuPopups.js'
 import sliderVariables from './tools/variablesSlider.js'
+import GenerateSlider from './tools/GenerateSlider.js'
+
 const start=()=>{
   
-console.log(sliderVariables.dots);
+
 const hamburger = new Hamburger();
 let hambClass="hamburger"
 hamburger.contructor(hambList,hambClass); 
@@ -15,7 +17,8 @@ let containerClassforDynamicMenu="menu"
 let buttonsClassForDynamicMenu= "js__dynamicMenu"
 let nameOfDataForDynamicMenu="data-menu"
 nav.contructor(containerClassforDynamicMenu, buttonsClassForDynamicMenu,nameOfDataForDynamicMenu)  
-
+const mainSlider= new GenerateSlider()
+mainSlider.contructor(sliderVariables)
 
 }
 

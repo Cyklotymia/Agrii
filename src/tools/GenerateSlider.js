@@ -78,9 +78,13 @@ export default class GenerateSlider {
     }
     generateDots=()=>{
         const dotsContainer=this.section.querySelector(`.${this.sliderConfig.dots.containerClass}`)
+        let number=0
         this.allSlides.forEach(slide=>{
             let dot=document.createElement("div")
             dot.classList.add(`${this.sliderConfig.dots.dotClass}`)
+
+            dot.dataset.number=number
+            number++
             dotsContainer.appendChild(dot)
             
         })

@@ -5,17 +5,17 @@ export default class AnimateSlider {
         this.timeForChange = this.sliderConfig.time
         this.allSlides = this.section.querySelectorAll(`.${this.sliderConfig.sliders.slideClass}`)
         this.indexOfVisibleSlide = 0
-        this.leftArrow=this.section.querySelector(`.${this.sliderConfig.arrows.leftClass}`)
-        this.rightArrow=this.section.querySelector(`.${this.sliderConfig.arrows.rightClass}`)
-        this.dots=this.section.querySelectorAll(`.${this.sliderConfig.dots.dotClass}`)
-        
-        
+        this.leftArrow = this.section.querySelector(`.${this.sliderConfig.arrows.leftClass}`)
+        this.rightArrow = this.section.querySelector(`.${this.sliderConfig.arrows.rightClass}`)
+        this.dots = this.section.querySelectorAll(`.${this.sliderConfig.dots.dotClass}`)
+
+
         this.addListeners()
         this.showSlide()
         this.showDot()
         this.setIntervals()
 
-        
+
     }
     controlIndex = () => {
         this.indexOfVisibleSlide = this.indexOfVisibleSlide > this.allSlides.length - 1 ? 0 : this.indexOfVisibleSlide
@@ -25,7 +25,7 @@ export default class AnimateSlider {
     changeIndex = () => {
         this.indexOfVisibleSlide++
         this.controlIndex()
-       
+
     }
     setIntervals = () => {
         this.intervalOfSlider = setInterval(() => {
@@ -33,42 +33,51 @@ export default class AnimateSlider {
             this.showSlide()
         }, this.timeForChange)
     }
-    showSlide=()=>{
-        this.allSlides.forEach(slide=>{
+    showSlide = () => {
+        this.allSlides.forEach(slide => {
             slide.classList.remove("active")
         })
         this.allSlides[this.indexOfVisibleSlide].classList.add("active")
         this.showDot()
     }
 
-    smallerIndex=()=>{
+    smallerIndex = () => {
         this.indexOfVisibleSlide--
         this.controlIndex()
         this.showSlide()
     }
-    stopMove=()=>{
-       clearInterval(this.intervalOfSlider) 
+    stopMove = () => {
+        clearInterval(this.intervalOfSlider)
     }
 
-    showDot=()=>{
-        this.dots.forEach(dot=>{
+    showDot = () => {
+        this.dots.forEach(dot => {
             dot.classList.remove("active")
         })
         this.dots[this.indexOfVisibleSlide].classList.add("active")
     }
-    addListeners=()=>{
-        this.section.addEventListener("mouseenter",()=>{
+    controlIndexByDots = (e) => {
+        this.indexOfVisibleSlide=e.target.dataset.number
+        this.showSlide()
+    }
+    addListeners = () => {
+        this.section.addEventListener("mouseenter", () => {
             this.stopMove()
         })
-        this.section.addEventListener("mouseleave",()=>{
+        this.section.addEventListener("mouseleave", () => {
             this.setIntervals()
         })
-        this.leftArrow.addEventListener("click",()=>{
+        this.leftArrow.addEventListener("click", () => {
             this.smallerIndex()
         })
-        this.rightArrow.addEventListener("click",()=>{
+        this.rightArrow.addEventListener("click", () => {
             this.changeIndex()
             this.showSlide()
+        })
+        this.dots.forEach(dot => {
+            dot.addEventListener("click", (e) => {
+                this.controlIndexByDots(e)
+            })
         })
 
     }

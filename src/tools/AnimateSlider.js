@@ -5,6 +5,8 @@ export default class AnimateSlider {
         this.timeForChange = this.sliderConfig.time
         this.allSlides = this.section.querySelectorAll(`.${this.sliderConfig.sliders.slideClass}`)
         this.indexOfVisibleSlide = 0
+        this.touchStart=null
+        this.touchMove=null
         this.leftArrow = this.section.querySelector(`.${this.sliderConfig.arrows.leftClass}`)
         this.rightArrow = this.section.querySelector(`.${this.sliderConfig.arrows.rightClass}`)
         this.dots = this.section.querySelectorAll(`.${this.sliderConfig.dots.dotClass}`)
@@ -57,8 +59,22 @@ export default class AnimateSlider {
         this.dots[this.indexOfVisibleSlide].classList.add("active")
     }
     controlIndexByDots = (e) => {
-        this.indexOfVisibleSlide=e.target.dataset.number
+        this.indexOfVisibleSlide = e.target.dataset.number
         this.showSlide()
+    }
+    handleTouchStart=(e)=>{
+        this.touchStart = e.touches[0].screenX;
+        this.stopMove()
+    }
+    handleTouchMove=(e)=>{
+        this.touchMove = e.touches[0].screenX;
+    }
+    changeSlideByTouch=()=>{
+        this.indexOfVisibleSlide=this.touchStart>this.touchMove?this.indexOfVisibleSlide+=1:this.indexOfVisibleSlide-=1
+        console.log(this.indexOfVisibleSlide);
+        this.controlIndex()
+        this.showSlide()
+        this.setIntervals()
     }
     addListeners = () => {
         this.section.addEventListener("mouseenter", () => {
@@ -78,6 +94,15 @@ export default class AnimateSlider {
             dot.addEventListener("click", (e) => {
                 this.controlIndexByDots(e)
             })
+        })
+        this.section.addEventListener("touchstart", (e) => {
+            this.handleTouchStart(e)
+        }, false)
+        this.section.addEventListener("touchmove", (e) => {
+            this.handleTouchMove(e)
+        }, false)
+        this.section.addEventListener("touchend", () => {
+            this.changeSlideByTouch()
         })
 
     }

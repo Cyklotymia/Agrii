@@ -2,11 +2,13 @@ const sliderVariables = {
     rootClass: "slider",
     time: 8000,
     dots: {
+        flag:true,
         containerClass: "slider__dots-container",
         dotClass: "slider__dot",
         dotClassJS: "js__slider-dot"
     },
     arrows: {
+        addActive:false,
         leftClass: "js__arrow--left",
         rightClass: "js__arrow--right"
 
@@ -62,31 +64,6 @@ const sliderVariables = {
             ],
 
 
-            // button: {
-            //     buttonInSliders: [{
-            //         flag: true,
-            //         buttonContainerClass:"slide__button",
-
-            //     },
-            //     {
-            //         flag: false,
-            //         buttonContainerClass:"slide__button",
-
-            //     },
-            //     {
-            //         flag: false,
-            //         buttonContainerClass:"slide__button",
-
-            //     },
-            //     {
-            //         flag: false,
-            //         buttonContainerClass:"slide__button",
-
-            //     },
-            // ],
-
-
-            // }
         },
 
 

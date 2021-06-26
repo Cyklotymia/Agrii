@@ -77,6 +77,10 @@ export default class GenerateSlider {
        
     }
     generateDots=()=>{
+        console.log(this.sliderConfig.dots.flag);
+        if (!this.sliderConfig.dots.flag) {
+            return
+        }
         const dotsContainer=this.section.querySelector(`.${this.sliderConfig.dots.containerClass}`)
         let number=0
         this.allSlides.forEach(slide=>{

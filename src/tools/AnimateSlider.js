@@ -16,8 +16,22 @@ export default class AnimateSlider {
         this.showSlide()
         this.showDot()
         this.setIntervals()
+        
 
 
+    }
+    arrowsActive= ()=>{
+        
+        if (this.sliderConfig.arrows.addActive) {
+            this.rightArrow.classList.add("active")
+            this.leftArrow.classList.add("active")
+        }
+    }
+    arrowsNotActive=()=>{
+        if (this.sliderConfig.arrows.addActive) {
+            this.rightArrow.classList.remove("active")
+            this.leftArrow.classList.remove("active")
+        }
     }
     controlIndex = () => {
         this.indexOfVisibleSlide = this.indexOfVisibleSlide > this.allSlides.length - 1 ? 0 : this.indexOfVisibleSlide
@@ -53,6 +67,9 @@ export default class AnimateSlider {
     }
 
     showDot = () => {
+        if (!this.sliderConfig.dots.flag) {
+            return
+        }
         this.dots.forEach(dot => {
             dot.classList.remove("active")
         })
@@ -79,9 +96,11 @@ export default class AnimateSlider {
     addListeners = () => {
         this.section.addEventListener("mouseenter", () => {
             this.stopMove()
+            this.arrowsActive()
         })
         this.section.addEventListener("mouseleave", () => {
             this.setIntervals()
+            this.arrowsNotActive()
         })
         this.leftArrow.addEventListener("click", () => {
             this.smallerIndex()

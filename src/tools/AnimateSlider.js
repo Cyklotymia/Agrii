@@ -5,6 +5,10 @@ export default class AnimateSlider {
         this.timeForChange = this.sliderConfig.time
         this.allSlides = this.section.querySelectorAll(`.${this.sliderConfig.sliders.slideClass}`)
         this.indexOfVisibleSlide = 0
+        this.leftArrow=this.section.querySelector(`.${this.sliderConfig.arrows.leftClass}`)
+        this.rightArrow=this.section.querySelector(`.${this.sliderConfig.arrows.rightClass}`)
+        
+        this.addListeners()
         this.showSlide()
         
         this.setIntervals()
@@ -19,10 +23,10 @@ export default class AnimateSlider {
     changeIndex = () => {
         this.indexOfVisibleSlide++
         this.controlIndex()
-        console.log(this.indexOfVisibleSlide);
+       
     }
     setIntervals = () => {
-        let intervalOfSlider = setInterval(() => {
+        this.intervalOfSlider = setInterval(() => {
             this.changeIndex()
             this.showSlide()
         }, this.timeForChange)
@@ -32,6 +36,31 @@ export default class AnimateSlider {
             slide.classList.remove("active")
         })
         this.allSlides[this.indexOfVisibleSlide].classList.add("active")
+    }
+
+    smallerIndex=()=>{
+        this.indexOfVisibleSlide--
+        this.controlIndex()
+        this.showSlide()
+    }
+    stopMove=()=>{
+       clearInterval(this.intervalOfSlider) 
+    }
+    addListeners=()=>{
+        this.section.addEventListener("mouseenter",()=>{
+            this.stopMove()
+        })
+        this.section.addEventListener("mouseleave",()=>{
+            this.setIntervals()
+        })
+        this.leftArrow.addEventListener("click",()=>{
+            this.smallerIndex()
+        })
+        this.rightArrow.addEventListener("click",()=>{
+            this.changeIndex()
+            this.showSlide()
+        })
+
     }
 
 }

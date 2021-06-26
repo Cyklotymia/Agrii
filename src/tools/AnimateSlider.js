@@ -7,10 +7,12 @@ export default class AnimateSlider {
         this.indexOfVisibleSlide = 0
         this.leftArrow=this.section.querySelector(`.${this.sliderConfig.arrows.leftClass}`)
         this.rightArrow=this.section.querySelector(`.${this.sliderConfig.arrows.rightClass}`)
+        this.dots=this.section.querySelectorAll(`.${this.sliderConfig.dots.dotClass}`)
+        
         
         this.addListeners()
         this.showSlide()
-        
+        this.showDot()
         this.setIntervals()
 
         
@@ -36,6 +38,7 @@ export default class AnimateSlider {
             slide.classList.remove("active")
         })
         this.allSlides[this.indexOfVisibleSlide].classList.add("active")
+        this.showDot()
     }
 
     smallerIndex=()=>{
@@ -45,6 +48,13 @@ export default class AnimateSlider {
     }
     stopMove=()=>{
        clearInterval(this.intervalOfSlider) 
+    }
+
+    showDot=()=>{
+        this.dots.forEach(dot=>{
+            dot.classList.remove("active")
+        })
+        this.dots[this.indexOfVisibleSlide].classList.add("active")
     }
     addListeners=()=>{
         this.section.addEventListener("mouseenter",()=>{

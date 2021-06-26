@@ -11,6 +11,7 @@ export default class GenerateSlider {
         this.reportWidth()
         this.addListeners()
         this.elementsInSlider()
+        this.generateDots()
         const mainSlider= new AnimateSlider()
         mainSlider.contructor(this.sliderConfig)
 
@@ -74,6 +75,16 @@ export default class GenerateSlider {
         this.textConteners[index].appendChild(element)
         
        
+    }
+    generateDots=()=>{
+        const dotsContainer=this.section.querySelector(`.${this.sliderConfig.dots.containerClass}`)
+        this.allSlides.forEach(slide=>{
+            let dot=document.createElement("div")
+            dot.classList.add(`${this.sliderConfig.dots.dotClass}`)
+            dotsContainer.appendChild(dot)
+            
+        })
+        
     }
 }
 

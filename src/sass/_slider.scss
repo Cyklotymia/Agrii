@@ -54,6 +54,7 @@
                 border: 1px white solid;
                 position: relative;
                 margin-right: 5px;
+                cursor: pointer;
 
             }
 
@@ -123,13 +124,6 @@
             }
         }
 
-        // .slide:nth-child(1){
-
-        // // background-image: url("/src/images/slider-desc-0.png");
-        // }
-        // .slide.active{
-        //    animation: opacity  linear both 8s infinite;
-        // }
 
     }
 }

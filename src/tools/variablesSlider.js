@@ -1,6 +1,6 @@
-
 const sliderVariables = {
     rootClass: "slider",
+    time: 8000,
     dots: {
         containerClass: "slider__dots-container",
         dotClass: "slider__dot",
@@ -12,13 +12,83 @@ const sliderVariables = {
 
     },
     sliders: {
+        imgChangeInMinWidth: 770,
         slidersImagesDesc: ["slider-desc-0.png", "slider-desc-1.jpg", "slider-desc-2.jpg", "slider-desc-3.jpg"],
         slidersImagesMob: ["slider-desc-0.png", "slider-mob-1.jpg", "slider-mob-2.jpg", "slider-mob-3.jpg"],
         slideClass: "js__slide",
-        text: {
-            slidersWithText: [true, false, false, false],
-            textClass:"js__slider-text"
-        }
+        parametersOfText: {
+
+            textClass: "js__slide-text",
+            headerClass: "slide__header",
+            descriptionClass: "slide__text",
+            otherClass: "",
+            textContent: [{
+                    flag: true,
+                    headerTag: "h2",
+                    descriptionTag: "p",
+                    otherTag: "",
+                    headerText: "Poznaj rolnictwo przyszłości RHIZA",
+                    descriptionText: "Wyobraź sobie, że możesz podejmować najlepsze decyzje w każdej kwestii dotyczącej Twoich pól",
+                    otherText: ""
+                },
+                {
+                    flag: false,
+                    headerTag: "",
+                    descriptionTag: "",
+                    otherTag: "",
+                    headerText: "",
+                    descriptionText: "",
+                    otherText: ""
+                },
+                {
+                    flag: false,
+                    headerTag: "",
+                    descriptionTag: "",
+                    otherTag: "",
+                    headerText: "",
+                    descriptionText: "",
+                    otherText: ""
+                },
+                {
+                    flag: false,
+                    headerTag: "",
+                    descriptionTag: "",
+                    otherTag: "",
+                    headerText: "",
+                    descriptionText: "",
+                    otherText: ""
+                },
+
+            ],
+
+
+            // button: {
+            //     buttonInSliders: [{
+            //         flag: true,
+            //         buttonContainerClass:"slide__button",
+
+            //     },
+            //     {
+            //         flag: false,
+            //         buttonContainerClass:"slide__button",
+
+            //     },
+            //     {
+            //         flag: false,
+            //         buttonContainerClass:"slide__button",
+
+            //     },
+            //     {
+            //         flag: false,
+            //         buttonContainerClass:"slide__button",
+
+            //     },
+            // ],
+
+
+            // }
+        },
+
 
     }
 

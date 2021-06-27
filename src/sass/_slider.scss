@@ -81,12 +81,14 @@
         }
 
         .slider__container {
-            width: 100vw;
+            
+           
             min-width: 320px;
             min-height: 227px;
             height: 65vw;
             position: relative;
             max-height: 559px;
+            
              .slide__link {
                     @include position(absolute, 0, 0);
                     width: 100%;
@@ -108,6 +110,8 @@
                 height: 100%;
                 opacity: 0;
                 transition: 1s opacity linear;
+                
+
 
                
                 .wrapper{

@@ -6,6 +6,8 @@ import DynamicMenu from './tools/menuPopups.js'
 import sliderVariables from './tools/variablesSlider.js'
 import GenerateSlider from './tools/GenerateSlider.js'
 
+
+
 const start=()=>{
   
 
@@ -18,8 +20,7 @@ let buttonsClassForDynamicMenu= "js__dynamicMenu"
 let nameOfDataForDynamicMenu="data-menu"
 nav.contructor(containerClassforDynamicMenu, buttonsClassForDynamicMenu,nameOfDataForDynamicMenu)  
 const mainSlider= new GenerateSlider()
-mainSlider.contructor(sliderVariables)
-
+mainSlider.contructor(sliderVariables);
 }
 
 

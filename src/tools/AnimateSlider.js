@@ -12,7 +12,7 @@ export default class AnimateSlider {
         this.rightArrow = this.section.querySelector(`.${this.sliderConfig.arrows.rightClass}`); // przypisuje se prawą strzałkę 
         // tera myśle ze troche przypal bo co jak wgl nie będę chciała strzalek ale już chuj
         this.dots = this.section.querySelectorAll(`.${this.sliderConfig.dots.dotClass}`); // pobiera wszystkie kropki
-
+        this.changeLink()
 
         this.addListeners(); // funkcja dodająca listenery
         this.showSlide(); // dodaje active do slajda
@@ -56,6 +56,7 @@ export default class AnimateSlider {
         });
         this.allSlides[this.indexOfVisibleSlide].classList.add("active") // dodaje active temu któremu każe mu index
         this.showDot(); // i zmienia od razu też kropke która się świeci
+        this.changeLink()
     }
 
     smallerIndex = () => { // zmniejsza index o 1
@@ -93,6 +94,19 @@ export default class AnimateSlider {
         this.showSlide(); // pokazuje slidera
         this.setIntervals(); // odpala znów interval bo jak zaczynasz dotykać to się wyłącza
     };
+    changeLink=()=>{
+        console.log(this.sliderConfig.links);
+        if (!this.sliderConfig.links.flag) {
+            return
+        }
+        const linkContener=this.section.querySelector(`.${this.sliderConfig.links.classOfLinkContainer}`)
+        
+        let link=this.sliderConfig.links.arrOfLinks[this.indexOfVisibleSlide]
+        
+        linkContener.setAttribute("href", `${link}`) 
+        
+       
+    }
     addListeners = () => { // listenery
         this.section.addEventListener("mouseenter", () => { // jak wjezdzasz myszka na sekcje
             this.stopMove(); // wylacz syf

@@ -9,8 +9,8 @@
 .agrii__button-container {
     display: block;
     text-decoration: none;
-    height: 50px;
-    width: 200px;
+    height: 30px;
+    width: 180px;
 
     .agrii__button {
         background-color: white;
@@ -44,12 +44,15 @@
 .agrii__button-container::after {
     display: block;
     content: "";
-    width: 99%;
-    height: 99%;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
     border: white 1px solid;
     transform: translate(5%,-90%);
 }
 
 .agrii__button-container:hover .agrii__button {
     transform: translate(5%, 10%);
+    
+    
+
 }

@@ -95,7 +95,6 @@ export default class AnimateSlider {
         this.setIntervals(); // odpala znów interval bo jak zaczynasz dotykać to się wyłącza
     };
     changeLink=()=>{
-        console.log(this.sliderConfig.links);
         if (!this.sliderConfig.links.flag) {
             return
         }

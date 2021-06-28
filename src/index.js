@@ -5,6 +5,7 @@ import hambList from './tools/variables'
 import DynamicMenu from './tools/menuPopups.js'
 import sliderVariables from './tools/variablesSlider.js'
 import GenerateSlider from './tools/GenerateSlider.js'
+import AddActive from './tools/AddActive.js'
 
 
 
@@ -21,6 +22,8 @@ let nameOfDataForDynamicMenu="data-menu"
 nav.contructor(containerClassforDynamicMenu, buttonsClassForDynamicMenu,nameOfDataForDynamicMenu)  
 const mainSlider= new GenerateSlider()
 mainSlider.contructor(sliderVariables);
+const footerAddClass= new AddActive()
+footerAddClass.contructor("footer","footer__header-container",["footer__newsletter-agree-input"])
 }
 
 

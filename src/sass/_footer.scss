@@ -10,49 +10,114 @@
         .footer__info {
             order: 2;
             font-family: $font-family-F;
+            width: 100%;
 
             .footer__header-container {
+                @include flexParent(row, nowrap, space-between, center);
+                border-top: 1px solid #5d5e5e;
+                width: 100%;
+                padding: 15px 0;
+                cursor: pointer;
+
                 .footer__header {}
 
-                .icon-icon-10 {}
+                .icon-icon_10 {
+                    font-size: 10px;
+                }
             }
 
             .footer__list {
+                // display: none;
+                margin: 10px 0 20px 0;
+
                 .footer__list-element {
+                    padding: 10px 0;
+                    font-size: 14px;
+
                     .footer__list-element-link {
                         font-weight: $weight-medium;
                         color: white;
                         text-decoration: none;
+                        transition: .3s;
 
                     }
+
+                    .footer__list-element-link:hover {
+                        color: $main-color;
+                    }
                 }
+
             }
         }
 
+        .footer__info.active {}
+
         .footer__contact {
             order: 3;
+            font-family: $font-family-F;
+            width: 100%;
 
             .footer__header-container {
+                @include flexParent(row, nowrap, space-between, center);
+                border-top: 1px solid #5d5e5e;
+                width: 100%;
+                padding: 15px 0;
+
                 .footer__header {}
 
-                .icon-icon-10 {}
+                .icon-icon_10 {
+                    font-size: 10px;
+                }
             }
 
-            .footer__phone {
-                .icon-icon_06 {}
+            .footer__contact-conatiner {
 
-                .footer__phone-number {}
+
+                .footer__phone {
+                    margin: 20px 0 10px 0;
+                    @include flexParent(row,nowrap,flex-start,center);
+
+                    .icon-icon_06 {
+                        color: $main-color;
+                        font-size: 30px;
+                    }
+
+                    .footer__phone-number {
+                        font-size: 20px;
+                        margin-left: 10px;
+                    }
+                }
+
+                .footer__contact-info {
+                    display: block;
+                    margin: 20px 0 10px 0;
+                }
+
+                .footer__contact-email {
+                    font-size: 20px;
+                    margin: 20px 0;
+                }
+
+                .footer__button {
+                    @include flexParent(row, nowrap, center, center);
+                    text-decoration: none;
+                    border: 1px white solid;
+                    margin: 20px 0 20px 0;
+                    width: 80%;
+                    height: 50px;
+                     .footer__button-text {
+                        color: white;
+                        margin-right: 10px;
+                        
+                    }
+
+                    .icon-icon_05 {
+                        color: white;
+                        font-size: 25px;
+                    }
+                }
             }
 
-            .footer__contact-info {}
-
-            .footer__contact-email {}
-
-            .footer__button {
-                .footer__button-text {}
-
-                .icon-icon_05 {}
-            }
         }
 
         .footer__newsletter {
@@ -100,10 +165,12 @@
             }
 
             .footer__newsletter-agree-container {
-                @include flexParent(row,nowrap,flex-start,flex-start);
+                @include flexParent(row, nowrap, flex-start, flex-start);
                 margin-bottom: 20px;
+
                 .footer__newsletter-agree-input-container {
-                     height: 100%;
+                    height: 100%;
+
                     .footer__newsletter-agree-input {
                         position: relative;
                         background-color: #3d3d3d;
@@ -114,10 +181,11 @@
                         cursor: pointer;
                         transition: .3s;
                         padding: 2px;
-                      
+
 
                     }
-                    .footer__newsletter-agree-input::after{
+
+                    .footer__newsletter-agree-input::after {
                         content: "";
                         @include positionCenter();
                         opacity: 0;
@@ -125,9 +193,10 @@
                         width: 60%;
                         height: 60%;
                         transition: .3s;
-                       
+
                     }
-                    .footer__newsletter-agree-input::after.active{
+
+                    .footer__newsletter-agree-input::after.active {
                         opacity: 1;
                     }
                 }
@@ -136,14 +205,15 @@
                 .footer__newsletter-label {
                     font-size: 10px;
                     margin-left: 10px;
-                     line-height: 1.8;
-                     cursor: pointer;
+                    line-height: 1.8;
+                    cursor: pointer;
                 }
             }
 
             .footer__newsletter-social {
-                @include flexParent(row,nowrap,flex-start,flex-start);
+                @include flexParent(row, nowrap, flex-start, flex-start);
                 margin: 15px 0;
+
                 .footer__newsletter-text {
                     margin-right: 20px;
                     font-size: 20px;

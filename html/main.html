@@ -650,7 +650,10 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__info">
-                <h3 class="footer__header">Informacje</h3>
+                <div class="footer__header-container">
+                    <h3 class="footer__header">Informacje</h3>
+                    <i class="icon-icon_10"></i>
+                </div>
                 <ul class="footer__list">
                     <li class="footer__list-element">
                         <a href="#" class="footer__list-element-link">Agrii VIP Klub</a>
@@ -673,9 +676,11 @@
 
                 </ul>
             </div>
-            <div class="footer__offer">
-                <h3 class="footer__header">Oferta</h3>
-                <h3 class="footer__header">Informacje</h3>
+            <div class="footer__info">
+                <div class="footer__header-container">
+                    <h3 class="footer__header">Oferta</h3>
+                    <i class="icon-icon_10"></i>
+                </div>
                 <ul class="footer__list">
                     <li class="footer__list-element">
                         <a href="#" class="footer__list-element-link">Nasiona</a>
@@ -698,10 +703,14 @@
                     <li class="footer__list-element">
                         <a href="#" class="footer__list-element-link">Inne</a>
                     </li>
-                    </ul>
+                </ul>
             </div>
             <div class="footer__contact">
-                <h3 class="footer__header">Masz pytanie?</h3>
+                <div class="footer__header-container">
+                    <h3 class="footer__header">Masz pytanie?</h3>
+                    <i class="icon-icon_10"></i>
+                </div>
+
                 <div class="footer__phone">
                     <i class="icon-icon_06"></i>
                     <span class="footer__phone-number"><b>+48 61 842 94 66</b></span>
@@ -713,18 +722,22 @@
                     <i class="icon-icon_05"></i>
                 </a>
             </div>
-            <form action="newsletter.php" method="post"class="footer__newsletter">
+            <form action="newsletter.php" method="post" class="footer__newsletter">
                 <h2 class="footer__newsletter-header">Zapisz się na newslettera</h2>
-                <span class="footer__newsletter-text">Zapisz się do newsletter i otrzymaj dostęp do unikalnych porad oraz nowości produktowych</span>
+                <span class="footer__newsletter-text">Zapisz się do newsletter i otrzymaj dostęp do unikalnych porad
+                    oraz nowości produktowych</span>
 
                 <div class="footer__newsletter-input-container">
-                    <input type="email" placeholder="Podaj swój firmowy adres e-mail" class="footer__newsletter-input">
+                    <input type="email" placeholder="Podaj swój adres e-mail" class="footer__newsletter-input">
                     <button class="footer__newsletter-button">Zapisz się</button>
                 </div>
 
                 <div class="footer__newsletter-agree-container">
-                    <input id="agree"type="checkbox" class="footer__newsletter-agree-input">
-                    <label for="agree">Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji dotyczących świadczonych przez Administratora.Zgoda może zostać cofnięta w każdym czasie. Polityka prywatności</label>
+                    <div class="footer__newsletter-agree-input-container"><input id="agree" type="checkbox" class="footer__newsletter-agree-input"></div>
+                    
+                    <label class="footer__newsletter-label" for="agree">Wyrażam zgodę na otrzymywanie drogą
+                        elektroniczną na wskazany przeze mnie adres e-mail informacji dotyczących świadczonych przez
+                        Administratora.Zgoda może zostać cofnięta w każdym czasie. Polityka prywatności</label>
                 </div>
 
                 <div class="footer__newsletter-social">

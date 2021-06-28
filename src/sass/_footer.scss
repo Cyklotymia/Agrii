@@ -1,0 +1,169 @@
+.footer {
+    background-color: #3d3d3d;
+    color: white;
+    margin-top: 20px;
+    padding: 30px 20px;
+
+    .footer__container {
+        @include flexParent(column, nowrap, center, center);
+
+        .footer__info {
+            order: 2;
+            font-family: $font-family-F;
+
+            .footer__header-container {
+                .footer__header {}
+
+                .icon-icon-10 {}
+            }
+
+            .footer__list {
+                .footer__list-element {
+                    .footer__list-element-link {
+                        font-weight: $weight-medium;
+                        color: white;
+                        text-decoration: none;
+
+                    }
+                }
+            }
+        }
+
+        .footer__contact {
+            order: 3;
+
+            .footer__header-container {
+                .footer__header {}
+
+                .icon-icon-10 {}
+            }
+
+            .footer__phone {
+                .icon-icon_06 {}
+
+                .footer__phone-number {}
+            }
+
+            .footer__contact-info {}
+
+            .footer__contact-email {}
+
+            .footer__button {
+                .footer__button-text {}
+
+                .icon-icon_05 {}
+            }
+        }
+
+        .footer__newsletter {
+            order: 1;
+            font-family: $font-family-F;
+
+            .footer__newsletter-header {
+                margin-bottom: 15px;
+                font-size: 30px;
+            }
+
+            .footer__newsletter-text {
+                display: block;
+                margin-bottom: 30px;
+
+            }
+
+            .footer__newsletter-input-container {
+
+                @include flexParent(row, nowrap, flex-end, center);
+                height: 40px;
+                margin-bottom: 20px;
+
+                .footer__newsletter-input {
+                    background-color: #3d3d3d;
+                    color: #FFFFFF;
+                    font-family: $font-family-F;
+                    font-weight: light;
+                    border: none;
+                    height: 100%;
+                    border-bottom: 1px white solid;
+                    flex-grow: 1;
+
+                }
+
+                .footer__newsletter-button {
+                    border: none;
+                    color: black;
+                    font-family: $font-family-F;
+                    font-weight: $weight-bold;
+                    height: 100%;
+                    width: 40%;
+                    background-color: $main-color;
+                }
+            }
+
+            .footer__newsletter-agree-container {
+                @include flexParent(row,nowrap,flex-start,flex-start);
+                margin-bottom: 20px;
+                .footer__newsletter-agree-input-container {
+                     height: 100%;
+                    .footer__newsletter-agree-input {
+                        position: relative;
+                        background-color: #3d3d3d;
+                        appearance: none;
+                        border: 1px solid #5d5e5e;
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                        transition: .3s;
+                        padding: 2px;
+                      
+
+                    }
+                    .footer__newsletter-agree-input::after{
+                        content: "";
+                        @include positionCenter();
+                        opacity: 0;
+                        background-color: $main-color;
+                        width: 60%;
+                        height: 60%;
+                        transition: .3s;
+                       
+                    }
+                    .footer__newsletter-agree-input::after.active{
+                        opacity: 1;
+                    }
+                }
+
+
+                .footer__newsletter-label {
+                    font-size: 10px;
+                    margin-left: 10px;
+                     line-height: 1.8;
+                     cursor: pointer;
+                }
+            }
+
+            .footer__newsletter-social {
+                @include flexParent(row,nowrap,flex-start,flex-start);
+                margin: 15px 0;
+                .footer__newsletter-text {
+                    margin-right: 20px;
+                    font-size: 20px;
+                }
+
+                .icon-icon_07 {
+                    margin-right: 20px;
+                    font-size: 20px;
+                }
+
+                .icon-icon_08 {
+                    margin-right: 20px;
+                    font-size: 20px;
+                }
+
+                .icon-icon_09 {
+                    margin-right: 20px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

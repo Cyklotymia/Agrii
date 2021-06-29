@@ -1,8 +1,4 @@
-.footer {
-    background-color: #3d3d3d;
-    color: white;
-    margin-top: 20px;
-    padding: 30px 0;
+
 
     .footer__container {
         @include flexParent(column, nowrap, center, center);
@@ -629,4 +625,3 @@
             @include flexParent(row,nowrap,space-between,center);
         }
     }
-}

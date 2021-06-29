@@ -1,10 +1,4 @@
-.header {
-    width: 100vw;
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    background-color: white;
+
 
     .hamburger__popup {
         @include position(fixed, -100vw, 73px);
@@ -609,17 +603,6 @@
             display: none;
         }
     }
-}
 
 
-@media (min-width:770px) {
-    .header::after {
-        content: "";
-        display: block;
-        height: 13px;
-        width: 100vw;
-        background-color: $main-color;
-        @include position(absolute, 0, 100%);
-    }
 
-}

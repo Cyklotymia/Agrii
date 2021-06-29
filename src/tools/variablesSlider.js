@@ -68,7 +68,7 @@ const sliderVariables = {
 
     },
     links:{
-        flag:true,
+        flag:false,
         arrOfLinks:["kotki.pl","google.pl","pieski.pl","costam.pl"],
         classOfLinkContainer: "slide__link"
     }

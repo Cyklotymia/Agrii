@@ -1,4 +1,6 @@
-
+.main {
+    background-color: rgb(255, 255, 255);
+    margin-top: 129px;
 
     .slider {
         position: relative;
@@ -8,7 +10,7 @@
             position: absolute;
             top: 50%;
             background-color: white;
-            z-index: 2;
+            z-index: 4;
             transform: translateY(-50%);
             height: 6vw;
             width: 6vw;
@@ -17,6 +19,7 @@
             transition: .3s;
             max-height: 50px;
             max-width: 50px;
+
 
             .slider__arrow-icon {
                 color: black;
@@ -48,12 +51,12 @@
         .slider__dots-container {
             @include positionCenter();
             @include flexParent(row, nowrap, center, center);
-            z-index: 2;
+            z-index: 4;
             top: 90%;
 
             .slider__dot {
-                height: 20px;
-                width: 20px;
+                height: 21px;
+                width: 21px;
                 background-color: transparent;
                 border-radius: 50%;
                 opacity: 50%;
@@ -87,17 +90,17 @@
             position: relative;
             max-height: 559px;
             
-             .slide__link {
-                    @include position(absolute, 0, 0);
-                    width: 100%;
-                    height: 100%;
-                    z-index: 3;
-                }
-            @media (min-width:770px) {
-                .slide__link{
-                    display: none
-                }
-            }
+            //  .slide__link {
+            //         @include position(absolute, 0, 0);
+            //         width: 100%;
+            //         height: 100%;
+            //         z-index: 3;
+            //     }
+            // @media (min-width:770px) {
+            //     .slide__link{
+            //         display: none
+            //     }
+            // }
 
             .slide {
                 @include position(absolute, 0, 0);
@@ -108,6 +111,7 @@
                 height: 100%;
                 opacity: 0;
                 transition: 1s opacity linear;
+                overflow: hidden;
                 
 
 
@@ -116,11 +120,12 @@
                     position: relative}
                 
                 .slide__text-container {
-                    @include position(absolute, 5%, 15%);
+                    @include position(absolute, 0,0);
                     color: white;
                     font-family: $font-family-F;
-                    max-width: 50%;
-                    padding: 10px;
+                    width: 100%;
+                    height: 100%;
+                    padding: 5% 50% 0 15%;
                     letter-spacing: -1.12px;
                     
 
@@ -167,13 +172,19 @@
 
                     // .slide__button {}
                     .slide__button {
-                        display: none;
+                        @include position(absolute, 0, 0);
+                        width: 100%;
+                        height: 100%;
+                        z-index: 3;
+                        opacity: 0;
                        
                     }
                 
 
                     @media (min-width:1200px) {
                         .slide__button{
+                            opacity: 1;
+                            position: static;
                             display: block;
                             transform: translateY(25vw);
                             height: 45px;
@@ -232,4 +243,28 @@
 
 
     }
+}
 
+@media (min-width:770px) {
+    .main {
+        margin-top: 76px;
+    }
+}
+
+@media (min-width:1000px) {
+    .main {
+        margin-top: 83px;
+    }
+}
+
+@media (min-width:1200px) {
+    .main {
+        margin-top: 99px;
+    }
+}
+
+@media (min-width:1700px) {
+    .main {
+        margin-top: 101px;
+    }
+}

@@ -130,27 +130,18 @@
             height: auto;
 
         }
-        .info__element:nth-child(1){
+        .info__element:nth-child(odd){
             .info__text-container{
                 margin-left: 20px;
             }
         }
 
-        .info__element:nth-child(2){
+        .info__element:nth-child(even){
             .info__img-container{
                 order: 2;
             }
         }
-        .info__element:nth-child(3){
-            .info__text-container{
-                margin-left: 20px;
-            }
-        }
-        .info__element:nth-child(4){
-            .info__img-container{
-                order: 2;
-            }
-        }
+       
     }
 
     

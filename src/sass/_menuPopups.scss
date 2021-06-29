@@ -8,7 +8,7 @@
         @include position(absolute, 0, 76px);
 
         background-color: rgb(255, 255, 255);
-
+border-bottom: 1px solid #DDDEE2;
         width: 100vw;
 
         .wrapper {
@@ -17,6 +17,7 @@
                 padding: 20px;
                 @include flexParent(row, wrap, space-between, flex-start);
                 display: none;
+                
 
                 .menu__popup-list-container {
                     font-family: $font-family-F;

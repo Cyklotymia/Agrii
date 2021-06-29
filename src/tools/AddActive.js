@@ -3,9 +3,9 @@ export default class AddActive{
         this.section=document.querySelector(`.${rootClass}`)
         this.headers=document.querySelectorAll(`.${listenClass}`)
        this.otherToListenArr=otherToListenArr
-        
+        this.otherElement=null;
         this.getElements()
-        this.addListeners()
+        this.addListeners(this.otherElement)
     }
     addListeners=(otherElement)=>{
         this.headers.forEach(header=>{
@@ -16,6 +16,7 @@ export default class AddActive{
         if (otherElement) {
             otherElement.addEventListener("click",(e)=>{
                 this.addActive(e);
+               
             })
         }
         
@@ -25,15 +26,12 @@ export default class AddActive{
         this.otherToListenArr.forEach(otherClass=>{
             let otherElements=this.section.querySelectorAll(`.${otherClass}`)
             otherElements.forEach(element=>{
-                let otherElement=element
-                console.log(otherElement);
+                this.otherElement=element
                 
-                this.addListeners(otherElement)
             })
         })
     }
     addActive = (e)=>{
         e.target.closest(".js__addActive").classList.toggle("active")
-        console.log(e.target);
     }
 }

@@ -9,6 +9,7 @@ module.exports = {
     mode: "production",
     entry: {
         main: "./src/index.js",
+        contact:"./src/indexContact.js",
     },
     output: {
         filename: "js/[name].js",
@@ -25,16 +26,17 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: "Agrii",
+            title: "Agrii - main",
             filename:"main.html",
-            template:"./html/main.html"
+            template:"./html/main.html",
+            chunks:['main']
 
         }),
         new HtmlWebpackPlugin({
-          title: "Agrii-Contact",
+          title: "Agrii - contact",
           filename:"contact.html",
           template:"./html/contact.html",
-          chunks:[]
+          chunks:['contact']
 
       }),
         new CopyPlugin({
@@ -63,7 +65,6 @@ module.exports = {
                     
                 }
               },
-              
               {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use:[{

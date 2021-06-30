@@ -9,6 +9,7 @@ module.exports = {
     mode: "development",
     entry: {
         main: "./src/index.js",
+        contact:"./src/indexContact.js",
     },
     output: {
         filename: "js/[name].js",
@@ -35,7 +36,7 @@ module.exports = {
           title: "Developmentt",
           filename:"contact.html",
           template:"./html/contact.html",
-          chunks:[]
+          chunks:['contact']
 
       }),
         new CopyPlugin({

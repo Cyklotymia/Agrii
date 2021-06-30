@@ -58,3 +58,14 @@
     
 
 }
+
+.agrii__mask{
+    background: transparent linear-gradient(90deg, #000000 0%, #54545400 100%) 0% 0% no-repeat padding-box;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+opacity: 0.48;
+position: absolute;
+top: 0;
+left: 0;
+}

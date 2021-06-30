@@ -1,0 +1,54 @@
+.banner {
+    display: none;
+}
+
+
+@media (min-width:770px) {
+    .banner {
+        display: block;
+        background-image: url("/public/images/rechtsschutzversicherung-landwirtschaft2@2x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 30vw;
+        position: relative;
+        max-height: 560px;
+        // background: transparent linear-gradient(90deg, #000000 0%, #54545400 100%) 0% 0% no-repeat padding-box;
+
+        .wrapper {
+
+            position: relative;
+            top: 0;
+            left: 0;
+
+            .banner__text-container {
+                @include position(absolute, 10%, 40%);
+                z-index: 2;
+
+                .banner__text {
+                    color: white;
+                    font-family: $font-family-F;
+                    letter-spacing: -1.12px;
+                    font-size: 3vw;
+                    font-weight: $weight-bold;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media (min-width:1600px) {
+    .banner {
+        .wrapper {
+            .banner__text-container {
+
+                .banner__text {
+                    font-size: 56px;
+                }
+
+            }
+        }
+    }
+}

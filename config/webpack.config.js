@@ -26,9 +26,18 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: "Development",
-            template:"./html/main.html"
+            filename:"main.html",
+            template:"./html/main.html",
+            chunks:['main']
 
         }),
+        new HtmlWebpackPlugin({
+          title: "Developmentt",
+          filename:"contact.html",
+          template:"./html/contact.html",
+          chunks:[]
+
+      }),
         new CopyPlugin({
           patterns: [
             { from: "public/images", to: "images" },

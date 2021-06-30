@@ -26,9 +26,17 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: "Agrii",
+            filename:"main.html",
             template:"./html/main.html"
 
         }),
+        new HtmlWebpackPlugin({
+          title: "Agrii-Contact",
+          filename:"contact.html",
+          template:"./html/contact.html",
+          chunks:[]
+
+      }),
         new CopyPlugin({
           patterns: [
             { from: "public/images", to: "images" },

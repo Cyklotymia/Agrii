@@ -27,3 +27,8 @@ const start = () => {
 }
 
 window.addEventListener('DOMContentLoaded', start)
+
+
+// document.addEventListener("click",(e)=>{
+//     console.log(e.target.closest(".mapSouth"));
+// })

@@ -1,0 +1,42 @@
+.bigFarms__map-container {
+    .bigFarms__map {
+cursor: pointer;
+        .mapSouth {
+            background-color: blue;
+            rect {
+                fill: #dddddd;
+                transition: .5s all;
+            }
+        }
+        .mapSouth:hover rect {
+            fill: #c2c2c2;
+        }
+        .mapEast {
+            rect {
+                fill: #c2c2c2;
+                transition: .5s all;
+            }
+        }
+        .mapEast:hover rect {
+            fill: #a5a1a1;
+        }
+
+        .mapNorth {
+            rect {
+                fill: #8bd1e2;
+                transition: .5s all;
+            }
+        }
+        .mapNorth:hover rect {
+            fill: #79c8db;
+        }
+    }
+}
+.svg__text {
+    text-transform: uppercase;
+    fill: white;
+    font-size: 27px;
+    font-weight: $weight-bold;
+    text-shadow: 0 0 6px black;
+    font-family: $font-family-F;
+}

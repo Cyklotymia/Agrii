@@ -16,6 +16,7 @@ export default class AddActive{
         if (otherElement) {
             otherElement.addEventListener("click",(e)=>{
                 this.addActive(e);
+                
                
             })
         }

@@ -1,0 +1,54 @@
+.farmControl{
+    .farmControl__header{
+        font-family: $font-family-F;
+        font-size: 7.5vw;
+        font-weight: $weight-bold;
+        margin: 50px 0;
+    }
+    .farmControl__container{
+        margin-top: 10px;
+        .farmControl__element{
+            border: 1px $border-color solid;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            .farmControl__element-text{
+font-family: $font-family-F;
+            }
+        }
+    }
+}
+
+@media (min-width:550px) {
+    .farmControl{
+        margin-left: 15px;
+        .farmControl__header{
+            font-size: 35px;
+           
+        }
+        .farmControl__container{
+            @include flexParent(row,nowrap,space-between, center);
+            .farmControl__element{
+                flex-basis: 48%;
+                .farmControl__element-text{
+    font-family: $font-family-F;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:770px) {
+    .farmControl{
+       
+        
+        .farmControl__container{
+            @include flexParent(row,nowrap,flex-start, center);
+            .farmControl__element{
+                flex-basis:content;
+               margin: 0 15px 0 0 ;
+            }
+        }
+    }
+}

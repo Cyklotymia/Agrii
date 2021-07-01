@@ -12,12 +12,12 @@
     height: 30px;
     width: 180px;
     cursor: pointer;
-    
+
 
     .agrii__button {
         background-color: white;
         width: 100%;
-        height:100%;
+        height: 100%;
         padding: 17px 30px;
         @include flexParent(row, nowrap, center, center);
         transition: 0.3s;
@@ -49,23 +49,85 @@
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     border: white 1px solid;
-    transform: translate(5%,-90%);
+    transform: translate(5%, -90%);
 }
 
 .agrii__button-container:hover .agrii__button {
     transform: translate(5%, 10%);
-    
-    
+
+
 
 }
 
-.agrii__mask{
+.agrii__mask {
     background: transparent linear-gradient(90deg, #000000 0%, #54545400 100%) 0% 0% no-repeat padding-box;
     height: 100%;
     width: 100%;
     mix-blend-mode: multiply;
-opacity: 0.48;
-position: absolute;
-top: 0;
-left: 0;
+    opacity: 0.48;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.agrii__header-conatiner {
+    margin-top: 70px;
+    font-family: $font-family-F;
+    width: 100%;
+    
+
+
+    .agrii__header-text-container {
+        position: relative;
+        @include flexParent(row, nowrap, center, center);
+
+        .agrii__header-text {
+            display: block;
+            font-size: 7vw;
+            font-weight: $weight-bold;
+            padding: 0 10px;
+            background-color: white;
+            position: relative;
+            z-index: 3;
+            width: max-content;
+        }
+
+    }
+
+}
+
+.agrii__header-text-container::before {
+    background-color: $main-color;
+    content: "";
+    height: 3px;
+    width: 100%;
+    @include positionCenter();
+    // z-index:-1;
+}
+
+.agrii__header-text-small {
+    margin-top: 20px;
+    font-weight: $weight-medium;
+    line-height: 0.9;
+}
+
+@media (min-width:600px) {
+    .agrii__header-conatiner {
+       
+        .agrii__header-text-container {
+            .agrii__header-text {
+
+                font-size: 42px;
+
+            }
+
+        }
+
+    }
+
+    .agrii__header-text-small {
+        font-size: 16px;
+    }
 }

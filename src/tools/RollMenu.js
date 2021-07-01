@@ -38,6 +38,7 @@ export default class RollMenu {
         const itemToShow =searchInElement.querySelector(`.${this.classOfElementToShow}`)
         itemToShow.style.opacity="1"
         itemToShow.style.height=`${sumOfHeight}px`
+        console.log((e.target.closest(".js__addActive")));
         if (e.target.closest(".js__addActive").classList.contains("active")) {
             itemToShow.style.opacity="0"
         itemToShow.style.height=`0px`

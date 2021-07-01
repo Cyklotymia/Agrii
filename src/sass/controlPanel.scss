@@ -47,7 +47,7 @@
 
 @media (min-width:550px) {
     .controlPanel {
-        @include flexParent(row, wrap, space-around, center);
+        @include flexParent(row, wrap, space-between, center);
         .controlPanel__element {
            width:48%;
            height: 70px;             

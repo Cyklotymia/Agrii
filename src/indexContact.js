@@ -4,6 +4,7 @@ import hambList from './tools/variables'
 import DynamicMenu from './tools/menuPopups.js'
 import AddActive from './tools/AddActive.js'
 import RollMenu from './tools/RollMenu.js'
+import AddActiveMap from './tools/AddActiveMap'
 
 
 
@@ -24,6 +25,9 @@ const start = () => {
    
     const asideMenu = new RollMenu()
     asideMenu.contructor("asideMenu","asideMenu__element-header-container","asideMenu__popup-element","asideMenu__popup")
+
+    const bigFarms = new AddActiveMap()
+    bigFarms.contructor("bigFarms")
 }
 
 window.addEventListener('DOMContentLoaded', start)

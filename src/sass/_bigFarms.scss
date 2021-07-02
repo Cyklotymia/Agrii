@@ -1,0 +1,50 @@
+.bigFarms__map-container {
+    .bigFarms__info-container {
+        font-family: $font-family-F;
+        position: relative;
+        height: 300px;
+
+        .bigFarms__popup {
+            opacity: 0;
+            transition: .3s linear all;
+            padding: 20px;
+            @include position(absolute,0,0);
+
+            .bigFarms__popup-header {
+                font-weight: $weight-bold;
+                margin-bottom: 20px;
+                font-size: 20px
+            }
+
+            .bigFarms__popup-text-container {
+                @include flexParent(column, nowrap, flex-start, flex-start);
+
+                .bigFarms__popup-text-element {
+                    @include flexParent(row, wrap, flex-start, center);
+                    margin-bottom: 40px;
+
+                    .bigFarms__popup-img-container {
+                        max-width: 30px;
+                        min-width: 30px;
+                        margin-right: 30px;
+
+                        // .bigFarms__popup-img {}
+                    }
+
+                    .bigFarms__popup-text {
+                        font-size: 15px;
+                    }
+
+                }
+
+                .bigFarms__popup-text-element:last-child .bigFarms__popup-text:last-child {
+                    margin-left: 60px;
+                }
+            }
+
+        }
+        .bigFarms__popup.active{
+            opacity: 1;
+        }
+    }
+}

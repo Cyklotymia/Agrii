@@ -1,14 +1,17 @@
 .bigFarms__map-container {
+    width: 100%;
     .bigFarms__info-container {
         font-family: $font-family-F;
         position: relative;
         height: 300px;
+        width: 50%;
 
         .bigFarms__popup {
             opacity: 0;
             transition: .3s linear all;
             padding: 20px;
             @include position(absolute,0,0);
+            
 
             .bigFarms__popup-header {
                 font-weight: $weight-bold;
@@ -34,11 +37,17 @@
                     .bigFarms__popup-text {
                         font-size: 15px;
                     }
+                    @media (min-width:770px) {
+                        .bigFarms__popup-text{
+                            font-size: 12px;
+                        }
+                    }
 
                 }
 
                 .bigFarms__popup-text-element:last-child .bigFarms__popup-text:last-child {
                     margin-left: 60px;
+                    width: 100%;
                 }
             }
 
@@ -46,5 +55,16 @@
         .bigFarms__popup.active{
             opacity: 1;
         }
+    }
+}
+
+@media (min-width:770px) {
+    .bigFarms__map-container{
+        @include flexParent(row,nowrap,space-between,center);
+        max-width: none;
+        background-image: url("/public/images/contactAboveBg.svg");
+        background-position: center;
+        background-size: cover;
+
     }
 }

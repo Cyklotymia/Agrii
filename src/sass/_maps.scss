@@ -1,22 +1,32 @@
 .bigFarms__map-container {
+    
     .bigFarms__map {
-cursor: pointer;
+        cursor: pointer;
+
         .mapSouth {
             background-color: blue;
+
             rect {
                 fill: #dddddd;
                 transition: .5s all;
+                stroke: rgb(255, 255, 255) ;
+                stroke-width: 1px;
             }
         }
+
         .mapSouth:hover rect {
             fill: #c2c2c2;
         }
+
         .mapEast {
             rect {
                 fill: #c2c2c2;
                 transition: .5s all;
+                stroke: rgb(255, 255, 255) ;
+                stroke-width: 1px;
             }
         }
+
         .mapEast:hover rect {
             fill: #a5a1a1;
         }
@@ -25,13 +35,17 @@ cursor: pointer;
             rect {
                 fill: #8bd1e2;
                 transition: .5s all;
+                stroke: rgb(255, 255, 255) ;
+                stroke-width: 1px;
             }
         }
+
         .mapNorth:hover rect {
             fill: #79c8db;
         }
     }
 }
+
 .svg__text {
     text-transform: uppercase;
     fill: white;
@@ -39,4 +53,11 @@ cursor: pointer;
     font-weight: $weight-bold;
     text-shadow: 0 0 6px black;
     font-family: $font-family-F;
+}
+
+@media (min-width:770px) {
+    .bigFarms__map{
+        max-width: 50%;
+       
+    }
 }

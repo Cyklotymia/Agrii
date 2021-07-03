@@ -38,6 +38,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "vanilla-js-dropdown": "^2.2.0"
   }
 }

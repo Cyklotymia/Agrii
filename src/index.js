@@ -9,6 +9,7 @@ import AddActive from './tools/AddActive.js'
 
 
 
+
 const start=()=>{
   
 
@@ -24,6 +25,7 @@ const mainSlider= new GenerateSlider()
 mainSlider.contructor(sliderVariables);
 const footerAddClass= new AddActive()
 footerAddClass.contructor("footer","footer__header-container",["footer__newsletter-agree-input"])
+
 }
 
 

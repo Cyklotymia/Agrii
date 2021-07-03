@@ -5,6 +5,8 @@ import DynamicMenu from './tools/menuPopups.js'
 import AddActive from './tools/AddActive.js'
 import RollMenu from './tools/RollMenu.js'
 import AddActiveMap from './tools/AddActiveMap'
+import CustomSelect from 'vanilla-js-dropdown';
+import ShowInput from './tools/ShowInput';
 
 
 
@@ -28,6 +30,13 @@ const start = () => {
 
     const bigFarms = new AddActiveMap()
     bigFarms.contructor("bigFarms")
+
+    const voivodeship = new CustomSelect({ elem: 'voivodeship'})
+    const małopolskie = new CustomSelect({ elem: 'małopolskie'})
+    const wielkopolskie = new CustomSelect({ elem: 'wielkopolskie'})
+    const bigFarmForm= new ShowInput();
+    bigFarmForm.contruktor("bigFarms__form")
+
 }
 
 window.addEventListener('DOMContentLoaded', start)

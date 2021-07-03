@@ -684,9 +684,6 @@
                     <div class="agrii__header-conatiner">
                         <div class="agrii__header-text-container">
                             <span class="agrii__header-text">Kontakt > 100 ha</span>
-
-
-
                         </div>
 
                         <p class="agrii__header-text-small">Przedstawicieli gospodarstw większych niż 100 ha
@@ -2284,40 +2281,79 @@
                         </div>
 
                     </div>
-                    <!-- <form action="contactBig.php" method="post" class="bigFarms__form">
+                    <form action="contactBig.php" method="post" class="bigFarms__form">
                         <span class="bigFarms__form-header">Formularz kontaktowy</span>
-                        <input class="bigFarms__form-input" type="text" placeholder="Imię i nazwisko">
-                        <input class="bigFarms__form-input" type="email" required placeholder="Adres e-mail*">
-                        <input class="bigFarms__form-input" type="number" required placeholder="Numer telefonu*">
-                        <input class="bigFarms__form-input" type="text" required
-                            placeholder="- Jakim produktem jesteś zainteresowany?* -">
-                        <input class="bigFarms__form-input" type="text" required placeholder="Wielkość gospodarstwa*">
-                        <div class="bigFarms__input-container">
-                            <div class="bigFarms__input">
-                                <span class="bigFarms__input-text">Województwo*</span>
-                                <i class="icon-icon_10"></i>
-                                <div class="bigFarms__input-popup">
-                                    <ul class="bigFarms__input-popup-list">
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="bigFarms__input">
-                                <span class="bigFarms__input-text">- powiat* -</span>
-                                <i class="icon-icon_10"></i>
-                                <div class="bigFarms__input-popup">
-                                    <ul class="bigFarms__input-popup-list">
-
-                                    </ul>
-                                </div>
-                            </div>
 
 
+                        <div class="BigFarms__form-input-container">
+                            <input class="bigFarms__form-input" type="text" placeholder="Imię i nazwisko">
                         </div>
-                        <input class="bigFarms__form-input" type="text" required placeholder="Kod pocztowy*">
+                        <div class="BigFarms__form-input-container"><input class="bigFarms__form-input" type="email" required placeholder="Adres e-mail*"></div>
+                        <div class="BigFarms__form-input-container"><input class="bigFarms__form-input" type="number" required placeholder="Numer telefonu*"></div>
+                        <div class="BigFarms__form-input-container"><input class="bigFarms__form-input" type="text" required
+                            placeholder="- Jakim produktem jesteś zainteresowany?* -"></div>
 
-                        <textarea name="" placeholder="Treść wiadomości" id="message" cols="30" rows="10"
+                            <div class="BigFarms__form-input-container"> <input class="bigFarms__form-input" type="text" required placeholder="Wielkość gospodarstwa*"></div>
+                        
+                       
+                
+                        <div class="BigFarms__form-input-container">
+                            <select  id="voivodeship">
+                                <option selected value="0">województwo*</option>
+                                <option value="dolnośląskie">dolnośląskie</option>
+                                <option value="kujawsko-pomorskie" >kujawsko-pomorskie</option>
+                                <option value="lubelskie">lubelskie</option>
+                                <option value="lubuskie">lubuskie</option>
+                                <option value="mazowieckie">mazowieckie</option>
+                                <option value="małopolskie">małopolskie</option>
+                                <option value="opolskie">opolskie</option>
+                                <option value="podkarpackie">podkarpackie</option>
+                                <option value="podlaskie">podlaskie</option>
+                                <option value="pomorskie">pomorskie</option>
+                                <option value="śląskie">śląskie</option>
+                                <option value="świętokrzyskie">świętokrzyskie</option>
+                                <option value="warmińsko-mazurskie">warmińsko-mazurskie</option>
+                                <option value="wielkopolskie">wielkopolskie</option>
+                                <option value="zachodnio-pomorskie">zachodnio-pomorskie</option>
+                                <option value="łódzkie">łódzkie</option>
+                            </select>
+                          </div>
+                          <div data-disc="małopolskie"class="BigFarms__form-input-container--district js__showSelector">
+                            <select id="małopolskie">
+                                <option selected value="0">-powiat*-</option>
+                                <option value="bocheński">bocheński</option>
+                                <option value="brzeski" >brzeski</option>
+                                <option value="chrzanowski">chrzanowski</option>
+                                <option value="gorlicki">gorlicki</option>
+                                <option value="Kraków">Kraków</option>
+                                <option value="krakowski">krakowski</option>
+                                <option value="limanowski">limanowski</option>
+                                <option value="miechowski">miechowski</option>
+                                <option value="myślenicki">myślenicki</option>
+                                <option value="nowosądecki">nowosądecki</option>
+                                <option value="nowotarski">nowotarski</option>
+                            </select>
+                          </div>
+                          <div data-disc="wielkopolskie" class="BigFarms__form-input-container--district js__showSelector">
+                            <select id="wielkopolskie">
+                                <option selected value="0">-powiat*-</option>
+                                <option value="chodzieski">chodzieski</option>
+                                <option value="gnieźnieński">gnieźnieński</option>
+                                <option value="goździński">goździński</option>
+                                <option value="grodziski">grodziski</option>
+                                <option value="Kalisz">Kalisz</option>
+                                <option value="kolski">kolski</option>
+                                <option value="Konin">Konin</option>
+                                <option value="Leszno">Leszno</option>
+                            </select>
+                          </div>
+                        <div class="BigFarms__form-input-container"><input class="bigFarms__form-input" type="text" required placeholder="Kod pocztowy*"></div>
+                        
+                        <div class="BigFarms__form-input-container">
+                            <textarea name="" placeholder="Treść wiadomości" id="message" cols="30" rows="10"
                             class="bigFarms__form-textarea"></textarea>
+                        </div>
+                        
                         <div class="bigFarms__regulations-container">
                             <input type="checkbox" id="regulations" class="bigFarms__regulations-input">
                             <label for="regulations" class="bigFarms__regulations-label">Wyrażam zgodę na
@@ -2325,11 +2361,18 @@
                                 wiadomość zgodnie z Polityką prywatności.Wiem że zgodę mogę w każdej chwili
                                 wycofać.*</label>
                         </div>
-                        <div class="bigFarms__form-button-container"></div>
+                        
+                            <a href="#" class="agrii__button-container bigFarms__form-button-container">
+                                <div class="agrii__button">
+                                    <span class="agrii__button-text">Wyślij</span>
+                                    <div class="agrii__button-icon"><i class="icon-icon_05"></i></div>
+                                </div>
+                            </a>
+                        
 
 
 
-                    </form> -->
+                    </form> 
 
 
                 </section>

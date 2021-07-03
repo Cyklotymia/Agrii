@@ -2,7 +2,6 @@ export default class AddActiveMap{
     contructor(rootClass){
        this.section=document.querySelector(`.${rootClass}`)
        this.map=this.section.querySelector(".js__map")
-       console.log(this.map);
        this.Listeners()
     }
     Listeners=()=>{

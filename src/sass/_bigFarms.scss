@@ -1,17 +1,18 @@
 .bigFarms__map-container {
     width: 100%;
+
     .bigFarms__info-container {
         font-family: $font-family-F;
         position: relative;
         height: 300px;
-        width: 50%;
+        width: 100%;
 
         .bigFarms__popup {
             opacity: 0;
             transition: .3s linear all;
             padding: 20px;
-            @include position(absolute,0,0);
-            
+            @include position(absolute, 0, 0);
+
 
             .bigFarms__popup-header {
                 font-weight: $weight-bold;
@@ -37,8 +38,9 @@
                     .bigFarms__popup-text {
                         font-size: 15px;
                     }
+
                     @media (min-width:770px) {
-                        .bigFarms__popup-text{
+                        .bigFarms__popup-text {
                             font-size: 12px;
                         }
                     }
@@ -52,19 +54,142 @@
             }
 
         }
-        .bigFarms__popup.active{
+
+        .bigFarms__popup.active {
             opacity: 1;
         }
     }
 }
 
 @media (min-width:770px) {
-    .bigFarms__map-container{
-        @include flexParent(row,nowrap,space-between,center);
+    .bigFarms__map-container {
+        @include flexParent(row, nowrap, space-between, center);
         max-width: none;
         background-image: url("/public/images/contactAboveBg.svg");
         background-position: center;
         background-size: cover;
 
+    }
+}
+
+
+.bigFarms__form {
+    padding: 20px;
+
+    .bigFarms__form-header {
+        font-family: $font-family-F;
+        font-size: 20px;
+        font-weight: $weight-bold;
+        margin-bottom: 20px;
+
+    }
+
+    @media (min-width:550px) {
+        .bigFarms__form-header {
+            font-size: 25px;
+        }
+    }
+
+    .BigFarms__form-input-container--district {
+        display: none;
+    }
+    .BigFarms__form-input-container--district.active{
+        display: block;
+    }
+
+    .BigFarms__form-input-container {
+        width: 100%;
+        margin: 10px 0;
+
+        .bigFarms__form-textarea {
+            width: 100%;
+            border: 1px solid $border-color;
+            font-family: $font-family-F;
+            padding: 10px 10px;
+            height: 100px;
+        }
+
+        @media (min-width:550px) {
+            .bigFarms__form-textarea {
+                font-size: 15px;
+            }
+        }
+
+        .bigFarms__form-input {
+            width: 100%;
+            height: 40px;
+            padding: 0 10px;
+            border: 1px solid $border-color;
+            font-family: $font-family-F;
+        }
+
+        @media (min-width:550px) {
+            .bigFarms__form-input {
+                font-size: 15px
+            }
+        }
+
+    }
+
+    .bigFarms__regulations-container {
+        @include flexParent(row, nowrap, flex-start, flex-start);
+        margin-bottom: 20px;
+
+        .bigFarms__regulations-input {
+            position: relative;
+            background-color: white;
+            appearance: none;
+            border: 1px solid $border-color;
+            min-height: 20px;
+            min-width: 20px;
+            cursor: pointer;
+            transition: .3s;
+            padding: 2px;
+
+        }
+
+        .bigFarms__regulations-input::after {
+            content: "";
+            @include positionCenter();
+            opacity: 0;
+            background-color: $main-color;
+            width: 70%;
+            height: 70%;
+            transition: .3s;
+
+        }
+
+        .bigFarms__regulations-input:checked::after {
+            opacity: 1;
+        }
+
+        .bigFarms__regulations-label {
+            padding: 0;
+            margin-left: 10px;
+            font-size: 12px;
+            font-family: $font-family-F;
+            font-weight: $weight-medium;
+            line-height: 1.5;
+
+        }
+    }
+
+    .bigFarms__form-button-container {
+        margin: 0 0 0 auto;
+        width: 150px;
+
+        .agrii__button {
+            background-color: $main-color;
+        }
+
+    }
+
+    .agrii__button-container::after {
+        display: block;
+        content: "";
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border: $main-color 1px solid;
+        transform: translate(5%, -90%);
     }
 }

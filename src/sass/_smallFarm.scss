@@ -1,0 +1,161 @@
+.smallFarms {
+    //    .bigFarms__map-container--small{
+
+    //    } 
+    .smallFarms__info-container {
+        margin-top: 30px;
+        padding: 0 10px;
+
+        .smallFarms__info-header {
+            font-family: $font-family-F;
+            font-weight: $weight-bold;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .smallFarms__info-select-container {}
+
+        .smallFarms__info-text-container {
+            .smallFarms__info-text {
+                font-family: $font-family-F;
+                font-weight: $weight-bold;
+                font-size: 17px;
+                margin: 20px 0;
+            }
+        }
+
+        .smallFarms__choices {
+            margin-bottom: 20px;
+
+            .smallFarms__choice-container {
+                @include flexParent(row, nowrap, flex-start, center);
+
+                .agrii__input {
+                    margin-right: 10px
+                }
+
+                .smallFarms__choice-label {
+                    font-weight: $weight-light;
+                    font-size: 18px;
+                    font-family: $font-family-M;
+                }
+            }
+        }
+
+        .smallFarms__info-legend-container {
+            margin-bottom: 20px;
+            font-family: $font-family-M;
+
+            .smallFarms__info-legend-element {
+                margin-bottom: 5px;
+
+                .smallFarms__info-legend-element-text {
+                    font-weight: $weight-light;
+                    @include flexParent(row, nowrap, flex-start, center);
+                    font-size: 18px;
+                }
+
+                .smallFarms__info-legend-element-text::before {
+                    content: "";
+                    width: 40px;
+                    height: 4px;
+                    background-color: $main-color;
+                    display: block;
+                    margin-right: 10px;
+                }
+
+            }
+
+            .smallFarms__info-legend-element:nth-child(2) {
+                .smallFarms__info-legend-element-text::before {
+                    background-color: $border-color;
+                }
+            }
+        }
+
+    }
+}
+
+.smallFarms__shops-container {
+    padding: 0 10px;
+
+    .smallFarms__shops-element {
+        border: 4px $border-color solid;
+        padding: 20px 15px;
+
+        .smallFarms__shops-info-container {
+            margin-bottom: 50px;
+
+            .smallFarms__shops-element-header {
+                font-family: $font-family-F;
+                font-size: 20px;
+                font-weight: $weight-bold;
+            }
+
+            .smallFarms__shops-element-text {
+                margin-top: 10px;
+                font-family: $font-family-F;
+                font-weight: $weight-medium;
+                color: #7f7f7f;
+
+            }
+        }
+
+        .smallFarms__shops-contact-container {
+
+            .smallFarms__shops-contact-element {
+                @include flexParent(row, wrap, flex-start, center);
+                font-family: $font-family-M;
+                font-weight: $weight-light;
+                margin-bottom: 15px;
+
+                .smallFarms__shops-contact-img-container {
+                    min-width: 25px;
+                    max-width: 25px;
+                    margin-right: 10px;
+                    // .smallFarms__shops-contact-img {}
+                }
+
+                .smallFarms__shops-contact-text {
+
+                    width: 80%;
+                }
+
+
+            }
+
+            .smallFarms__shops-contact-element:last-child .smallFarms__shops-contact-text:last-child {
+                margin-left: 36px;
+                width: 100%;
+                margin-top: 5px;
+            }
+
+        }
+
+        .smallFarms__shops-button {
+            margin-top: 15px;
+            width: 100%;
+
+            .agrii__button-container {
+                height: 40px;
+                width: 200px;
+                display: block;
+                margin: 0 auto;
+
+
+
+                .agrii__button {
+                    background-color: $main-color;
+                    margin: 0 auto;
+
+                    .agrii__button-text {}
+                }
+            }
+        }
+
+        .agrii__button-container::after {
+            border: 1px $main-color solid;
+
+        }
+    }
+}

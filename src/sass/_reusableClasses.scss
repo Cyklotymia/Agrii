@@ -137,3 +137,38 @@
         font-weight: $weight-bold;
     }
 }
+
+
+.agrii__input {
+    position: relative;
+    background-color: white;
+    appearance: none;
+    border: 1px solid $border-color!important;
+    min-height: 20px;
+    min-width: 20px;
+    cursor: pointer;
+    transition: .3s;
+    padding: 2px;
+
+}
+@media (min-width:1200px) {
+    .agrii__input{
+        min-height: 25px;
+        min-width: 25px;
+    }
+}
+
+.agrii__input::after {
+    content: "";
+    @include positionCenter();
+    opacity: 0;
+    background-color: $main-color;
+    width: 70%;
+    height: 70%;
+    transition: .3s;
+
+}
+
+.agrii__input:checked::after {
+    opacity: 1;
+}

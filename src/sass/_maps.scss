@@ -6,7 +6,7 @@
         max-width: 614px;
 
         .mapSouth {
-            background-color: blue;
+            
 
             rect {
                 fill: #dddddd;
@@ -48,6 +48,15 @@
     }
 }
 
+.bigFarms__map--small{
+    path{
+        transition: .5s;
+    }
+    path:hover{
+        fill: $main-color;
+    }
+}
+
 .svg__text {
     text-transform: uppercase;
     fill: white;
@@ -63,3 +72,4 @@
        
     }
 }
+

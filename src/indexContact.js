@@ -36,6 +36,7 @@ const start = () => {
     const wielkopolskie = new CustomSelect({ elem: 'wielkopolskie'})
     const bigFarmForm= new ShowInput();
     bigFarmForm.contruktor("bigFarms__form")
+    const smallFarm=new new CustomSelect({ elem: 'województwaSmall'})
 
 }
 

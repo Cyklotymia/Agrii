@@ -19,13 +19,24 @@
                 margin-bottom: 20px;
                 font-size: 20px
             }
+            @media (min-width:1000px) {
+                .bigFarms__popup-header{
+                   font-size: 25px
+                }
+            }
+
+            @media (min-width:1400px) {
+                .bigFarms__popup-header{
+                   font-size: 26px
+                }
+            }
 
             .bigFarms__popup-text-container {
                 @include flexParent(column, nowrap, flex-start, flex-start);
 
                 .bigFarms__popup-text-element {
                     @include flexParent(row, wrap, flex-start, center);
-                    margin-bottom: 40px;
+                    margin-bottom: 20px;
 
                     .bigFarms__popup-img-container {
                         max-width: 30px;
@@ -33,6 +44,13 @@
                         margin-right: 30px;
 
                         // .bigFarms__popup-img {}
+                    }
+
+                    @media (min-width:1400px) {
+                        .bigFarms__popup-img-container {
+                            max-width: 32px;
+                        min-width: 32px;
+                        }
                     }
 
                     .bigFarms__popup-text {
@@ -44,7 +62,29 @@
                             font-size: 12px;
                         }
                     }
+                    @media (min-width:1000px) {
+                        .bigFarms__popup-text {
+                            font-size: 15px;
+                        }
+                    }
 
+                    @media (min-width:1400px) {
+                        .bigFarms__popup-text {
+                            font-size: 17px;
+                        }
+                    }
+
+                    @media (min-width:1600px) {
+                        .bigFarms__popup-text {
+                            font-size: 20px;
+                        }
+                    }
+
+                }
+                @media (min-width:770px) {
+                    .bigFarms__popup-text-element{
+                      margin-bottom: 20px;
+                    }
                 }
 
                 .bigFarms__popup-text-element:last-child .bigFarms__popup-text:last-child {
@@ -54,33 +94,63 @@
             }
 
         }
+        @media (min-width:770px) {
+            .bigFarms__popup{
+               padding-left: 50px;
+            }
+        }
 
         .bigFarms__popup.active {
             opacity: 1;
         }
     }
+   
 }
 
 @media (min-width:770px) {
     .bigFarms__map-container {
         @include flexParent(row, nowrap, space-between, center);
         max-width: none;
-        background-image: url("/public/images/contactAboveBg.svg");
-        background-position: center;
-        background-size: cover;
+        background-image: url("/public/images/contactAboveBg.png");
+        background-position: right;
+        background-size:400px ;
+        background-repeat: no-repeat;
 
+    }
+}
+
+@media (min-width:1000px) {
+    .bigFarms__map-container {
+        background-size:500px ;
+    }
+}
+
+@media (min-width:1200px) {
+    .bigFarms__map-container {
+        background-size:600px ;
+    }
+}
+
+@media (min-width:1400px) {
+    .bigFarms__map-container {
+        background-size:700px ;
     }
 }
 
 
 .bigFarms__form {
     padding: 20px;
+    @include flexParent(column,nowrap,center,center);
+    margin-top: 50px;
 
     .bigFarms__form-header {
         font-family: $font-family-F;
         font-size: 20px;
         font-weight: $weight-bold;
         margin-bottom: 20px;
+        width: 100%;
+        max-width: 627px;
+        
 
     }
 
@@ -90,8 +160,16 @@
         }
     }
 
+    @media (min-width:1000px) {
+        .bigFarms__form-header {
+            font-size: 26px;
+        }
+    }
+
     .BigFarms__form-input-container--district {
         display: none;
+        width: 100%;
+    max-width: 627px;
     }
     .BigFarms__form-input-container--district.active{
         display: block;
@@ -100,13 +178,18 @@
     .BigFarms__form-input-container {
         width: 100%;
         margin: 10px 0;
+max-width: 627px;
+
 
         .bigFarms__form-textarea {
             width: 100%;
             border: 1px solid $border-color;
             font-family: $font-family-F;
-            padding: 10px 10px;
+            
             height: 100px;
+            padding: 10px 20px;
+            
+            
         }
 
         @media (min-width:550px) {
@@ -114,26 +197,43 @@
                 font-size: 15px;
             }
         }
+        
+        @media (min-width:1200px) {
+            .bigFarms__form-textarea {
+                font-size: 20px;
+                height: 95px;
+            }
+        }
 
         .bigFarms__form-input {
             width: 100%;
             height: 40px;
-            padding: 0 10px;
+            padding: 10px 20px;
             border: 1px solid $border-color;
             font-family: $font-family-F;
         }
 
         @media (min-width:550px) {
             .bigFarms__form-input {
-                font-size: 15px
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width:1200px) {
+            .bigFarms__form-input {
+                font-size: 20px;
+                height:60px 
             }
         }
 
     }
+   
 
     .bigFarms__regulations-container {
         @include flexParent(row, nowrap, flex-start, flex-start);
         margin-bottom: 20px;
+        max-width: 627px;
+            // padding-left: 10px;
 
         .bigFarms__regulations-input {
             position: relative;
@@ -146,6 +246,12 @@
             transition: .3s;
             padding: 2px;
 
+        }
+        @media (min-width:1200px) {
+            .bigFarms__regulations-input{
+                min-height: 25px;
+                min-width: 25px;
+            }
         }
 
         .bigFarms__regulations-input::after {
@@ -170,13 +276,24 @@
             font-family: $font-family-F;
             font-weight: $weight-medium;
             line-height: 1.5;
+            
 
+        }
+        
+        @media (min-width:1200px) {
+            .bigFarms__regulations-label {
+                font-size: 14px;
+                line-height: 1.7;
+            }
         }
     }
 
     .bigFarms__form-button-container {
         margin: 0 0 0 auto;
         width: 150px;
+        height: 45px;
+        max-width: 627px;
+        
 
         .agrii__button {
             background-color: $main-color;
@@ -185,11 +302,6 @@
     }
 
     .agrii__button-container::after {
-        display: block;
-        content: "";
-        width: calc(100% - 2px);
-        height: calc(100% - 2px);
         border: $main-color 1px solid;
-        transform: translate(5%, -90%);
     }
 }

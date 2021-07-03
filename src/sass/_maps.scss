@@ -3,6 +3,7 @@
     .bigFarms__map {
         cursor: pointer;
         width: 90%;
+        max-width: 614px;
 
         .mapSouth {
             background-color: blue;
@@ -11,7 +12,7 @@
                 fill: #dddddd;
                 transition: .5s all;
                 stroke: rgb(255, 255, 255) ;
-                stroke-width: 1px;
+                stroke-width: 2px;
             }
         }
 
@@ -24,7 +25,7 @@
                 fill: #c2c2c2;
                 transition: .5s all;
                 stroke: rgb(255, 255, 255) ;
-                stroke-width: 1px;
+                stroke-width: 2px;
             }
         }
 
@@ -37,12 +38,12 @@
                 fill: #8bd1e2;
                 transition: .5s all;
                 stroke: rgb(255, 255, 255) ;
-                stroke-width: 1px;
+                stroke-width: 2px;
             }
         }
 
         .mapNorth:hover rect {
-            fill: #79c8db;
+            fill: #70c7dd;
         }
     }
 }

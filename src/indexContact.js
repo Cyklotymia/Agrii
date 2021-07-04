@@ -7,6 +7,7 @@ import RollMenu from './tools/RollMenu.js'
 import AddActiveMap from './tools/AddActiveMap'
 import CustomSelect from 'vanilla-js-dropdown';
 import ShowInput from './tools/ShowInput';
+import shopsSmallFarms from './tools/shopsSmallFarms';
 
 
 
@@ -36,7 +37,11 @@ const start = () => {
     const wielkopolskie = new CustomSelect({ elem: 'wielkopolskie'})
     const bigFarmForm= new ShowInput();
     bigFarmForm.contruktor("bigFarms__form")
-    const smallFarm=new new CustomSelect({ elem: 'województwaSmall'})
+    const smallFarm= new CustomSelect({ elem: 'województwaSmall'})
+
+    const smallFarmShops=new shopsSmallFarms()
+    smallFarmShops.contructor("smallFarms")
+    
 
 }
 

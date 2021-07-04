@@ -55,6 +55,9 @@
     path:hover{
         fill: $main-color;
     }
+    path.active{
+        fill: $main-color;
+    }
 }
 
 .svg__text {

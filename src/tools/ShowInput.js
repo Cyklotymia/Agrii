@@ -1,12 +1,12 @@
 export default class ShowInput {
     contruktor(rootClass){
         this.section=document.querySelector(`.${rootClass}`)
-        console.log(rootClass);
+        
         this.listeners()
         // console.log(document.querySelector(".js-Dropdown-title").textContent);
     }
     listeners=()=>{
-        document.querySelector(".js-Dropdown-list").addEventListener("click",(e)=>{this.showAnotherInput(e)})
+        this.section.querySelector(".js-Dropdown-list").addEventListener("click",(e)=>{this.showAnotherInput(e)})
     }
     showAnotherInput=(e)=>{
         this.section.querySelectorAll(".js__showSelector").forEach(input=>{

@@ -121,7 +121,7 @@
        
         .agrii__header-text-container {
             @include flexParent(row,nowrap,flex-start,center);
-            padding-left: 100px;
+            padding-left: 15%;
             .agrii__header-text {
 
                 font-size: 42px;

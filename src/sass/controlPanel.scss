@@ -1,4 +1,5 @@
 .controlPanel {
+    max-width: 100%;
     .controlPanel__element {
         @include flexParent(row, nowrap, flex-start, center);
         height: 60px;

@@ -1,4 +1,4 @@
-.bigFarms__map-container {
+.bigFarms__map-container{
     
     .bigFarms__map {
         cursor: pointer;
@@ -11,7 +11,7 @@
             rect {
                 fill: #dddddd;
                 transition: .5s all;
-                stroke: rgb(255, 255, 255) ;
+                stroke: transparent ;
                 stroke-width: 2px;
             }
         }
@@ -20,29 +20,36 @@
             fill: #c2c2c2;
         }
 
-        .mapEast {
+        .mapEast,.mapLeft {
             rect {
                 fill: #c2c2c2;
                 transition: .5s all;
-                stroke: rgb(255, 255, 255) ;
-                stroke-width: 2px;
+                stroke: transparent ;
+                stroke-width: 1.5px;
             }
         }
 
         .mapEast:hover rect {
             fill: #a5a1a1;
         }
+        
+        .mapLeft:hover rect {
+            fill: #a5a1a1;
+        }
 
-        .mapNorth {
+        .mapNorth,.mapRight {
             rect {
                 fill: #8bd1e2;
                 transition: .5s all;
-                stroke: rgb(255, 255, 255) ;
-                stroke-width: 2px;
+                stroke: transparent ;
+                stroke-width: 1.5px;
             }
         }
 
         .mapNorth:hover rect {
+            fill: #70c7dd;
+        }
+        .mapRight:hover rect {
             fill: #70c7dd;
         }
     }

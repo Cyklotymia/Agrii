@@ -41,6 +41,8 @@ const start = () => {
 
     const smallFarmShops=new shopsSmallFarms()
     smallFarmShops.contructor("smallFarms")
+    const tradeFarms = new AddActiveMap()
+    tradeFarms.contructor("smallFarms__trade")
     
 
 }

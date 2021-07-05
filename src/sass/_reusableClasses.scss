@@ -75,7 +75,7 @@
 .agrii__header-conatiner {
     margin-top: 70px;
     font-family: $font-family-F;
-    width: 100%;
+    
     
 
 
@@ -92,7 +92,8 @@
             background-color: white;
             position: relative;
             z-index: 3;
-            width: max-content;
+            // width: max-content;
+            max-width: 100%;
         }
 
     }
@@ -103,7 +104,7 @@
     background-color: $main-color;
     content: "";
     height: 3px;
-    width: 90%;
+    width: 100%;
     @include positionCenter();
 
     // z-index:-1;
@@ -121,7 +122,7 @@
        
         .agrii__header-text-container {
             @include flexParent(row,nowrap,flex-start,center);
-            padding-left: 15%;
+            padding-left: 5%;
             .agrii__header-text {
 
                 font-size: 42px;

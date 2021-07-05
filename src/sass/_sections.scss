@@ -19,13 +19,16 @@
 
 }
 
-.main,.banner,.main-contact__container {
+.main,.banner,.main-contact{
     background-color: rgb(255, 255, 255);
     margin-top: 129px;
+    
 }
 @media (min-width:770px) {
     .main-contact__container{
         margin-top: 0;
+        
+        
     }
 }
 
@@ -65,4 +68,5 @@
 .main-contact{
     @include flexParent(row,nowrap,flex-start,flex-start);
     margin-top:30px;
+    max-width: 100%;
 }

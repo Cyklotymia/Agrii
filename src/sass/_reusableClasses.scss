@@ -173,3 +173,39 @@
 .agrii__input:checked::after {
     opacity: 1;
 }
+
+
+.agrii__contact-header-container{
+    font-family: $font-family-F;
+    .agrii__contact-header{
+        font-weight: $weight-bold;
+        font-size: 20px;
+    }
+    .agrii__contact-text{
+        font-size: 13px;
+    }
+}
+
+.agrii__contact-info{
+    margin-top: 30px;
+    .agrii__contact-info-element{
+        font-family: $font-family-M;
+        @include flexParent(row,nowrap,flex-start,center);
+        margin-bottom: 20px;
+        .agrii__contact-info-element-img-container{
+            max-height: 30px;
+            min-height: 30px;
+            max-width: 30px;
+            min-width: 30px;
+            margin-right: 20px;
+            
+            .agrii__contact-info-element-img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .agrii__contact-info-element-text{
+            font-size: 15px;
+        }
+    }
+}

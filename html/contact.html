@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header js__readHeight">
         <div class="wrapper">
             <div class="nav">
                 <div class="hamburger">
@@ -628,38 +628,38 @@
                 </ul>
             </aside>
             <div class="main-contact__container">
-                <section class="controlPanel">
-                    <div class="controlPanel__element">
+                <section  class="controlPanel">
+                    <div data-scroll="farms" class="controlPanel__element js__controlElement">
                         <div class="controlPanel__img-container">
                             <img src="images/farmsContact.svg" alt="" class="controlPanel__img">
                         </div>
                         <span class="controlPanel__element-text">Kontakt dla gospodarstw</span>
                     </div>
-                    <div class="controlPanel__element">
+                    <div data-scroll="trade" class="controlPanel__element js__controlElement">
                         <div class="controlPanel__img-container">
                             <img src="images/contactB2B.svg" alt="" class="controlPanel__img">
                         </div>
                         <span class="controlPanel__element-text">Kontakt dla punktów handlowych</span>
                     </div>
-                    <div class="controlPanel__element">
+                    <div data-scroll="sell" class="controlPanel__element js__controlElement">
                         <div class="controlPanel__img-container">
                             <img src="images/buyCerals.svg" alt="" class="controlPanel__img">
                         </div>
                         <span class="controlPanel__element-text">Sprzedaż zbóż</span>
                     </div>
-                    <div class="controlPanel__element">
+                    <div data-scroll="vege" class="controlPanel__element js__controlElement">
                         <div class="controlPanel__img-container">
                             <img src="images/firstSite.svg" alt="" class="controlPanel__img">
                         </div>
                         <span class="controlPanel__element-text">Owoce i warzywa</span>
                     </div>
-                    <div class="controlPanel__element">
+                    <div data-scroll="export" class="controlPanel__element js__controlElement">
                         <div class="controlPanel__img-container">
                             <img src="images/thirdSite.svg" alt="" class="controlPanel__img">
                         </div>
                         <span class="controlPanel__element-text">Export</span>
                     </div>
-                    <div class="controlPanel__element">
+                    <div data-scroll="bok" class="controlPanel__element js__controlElement">
                         <div class="controlPanel__img-container">
                             <img src="images/secSite.svg" alt="" class="controlPanel__img">
                         </div>
@@ -667,20 +667,20 @@
                     </div>
 
                 </section>
-                <section class="farmControl">
+                <section data-scroll="farms" class="farmControl js__goTo">
                     <span class="farmControl__header">Kontakt dla gospodarstw</span>
                     <div class="farmControl__container">
-                        <div class="farmControl__element">
+                        <div data-scroll="farmsBig" class="farmControl__element js__controlElement">
                             <span class="farmControl__element-text"><b>Umów się z doradcą</b></span>
                             <span class="farmControl__element-text">(Gospodarstwa > 100 ha)</span>
                         </div>
-                        <div class="farmControl__element">
+                        <div data-scroll="farmsSmall" class="farmControl__element js__controlElement">
                             <span class="farmControl__element-text"><b>Kup w sklepie</b></span>
                             <span class="farmControl__element-text">(Gospodarstwa 100 ha)</span>
                         </div>
                     </div>
                 </section>
-                <section class="bigFarms">
+                <section data-scroll="farmsBig" class="bigFarms js__goTo">
                     <div class="agrii__header-conatiner">
                         <div class="agrii__header-text-container">
                             <span class="agrii__header-text">Kontakt > 100 ha</span>
@@ -2382,7 +2382,7 @@
 
 
                 </section>
-                <section class="smallFarms">
+                <section data-scroll="farmsSmall" class="smallFarms js__goTo">
                     <div class="agrii__header-conatiner">
                         <div class="agrii__header-text-container">
                             <span class="agrii__header-text">Kontakt &lt; 100 ha</span>
@@ -3014,7 +3014,7 @@
 
 
                 </section>
-                <section class="smallFarms__trade">
+                <section data-scroll="trade" class="smallFarms__trade js__goTo">
 
                     <div class="agrii__header-conatiner">
                         <div class="agrii__header-text-container">
@@ -4598,7 +4598,7 @@
                     </div>
 
                 </section>
-                <section class="bigFarms SaleCereals">
+                <section data-scroll="sell" class="bigFarms SaleCereals js__goTo">
                     <div class="agrii__header-conatiner">
                         <div class="agrii__header-text-container">
                             <span class="agrii__header-text">Sprzedaż zbóż</span>
@@ -6340,7 +6340,7 @@
 
 
                 </section>
-                <section class="vege">
+                <section data-scroll="vege" class="vege js__goTo">
                     <div class="agrii__header-conatiner">
                         <div class="agrii__header-text-container">
                             <span class="agrii__header-text">Owoce i warzywa</span>
@@ -6373,7 +6373,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="export">
+                <section data-scroll="export" class="export js__goTo">
                     <div class="agrii__header-conatiner">
                         <div class="agrii__header-text-container">
                             <span class="agrii__header-text">Export</span>
@@ -6406,7 +6406,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="bok">
+                <section data-scroll="bok" class="bok js__goTo">
                     <div class="agrii__header-conatiner">
                         <div class="agrii__header-text-container">
                             <span class="agrii__header-text">Biuro Obsługi Klienta</span>

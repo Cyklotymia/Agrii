@@ -8,6 +8,7 @@ import AddActiveMap from './tools/AddActiveMap'
 import CustomSelect from 'vanilla-js-dropdown';
 import ShowInput from './tools/ShowInput';
 import shopsSmallFarms from './tools/shopsSmallFarms';
+import SmoothScroll from './tools/SmoothScroll';
 
 
 
@@ -47,6 +48,10 @@ const start = () => {
     const sellMap = new AddActiveMap()
     sellMap.contructor("SaleCereals")
     // voivodeship_trade
+    const scrollControl=new SmoothScroll()
+    scrollControl.contructor("controlPanel",13)
+    const scrollFarms=new SmoothScroll()
+    scrollFarms.contructor("farmControl",13)
     
 
 }

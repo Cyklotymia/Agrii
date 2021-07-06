@@ -38,11 +38,15 @@ const start = () => {
     const bigFarmForm= new ShowInput();
     bigFarmForm.contruktor("bigFarms__form")
     const smallFarm= new CustomSelect({ elem: 'województwaSmall'})
+    const tradeForm= new CustomSelect({ elem: 'voivodeship_trade'})
 
     const smallFarmShops=new shopsSmallFarms()
     smallFarmShops.contructor("smallFarms")
     const tradeFarms = new AddActiveMap()
     tradeFarms.contructor("smallFarms__trade")
+    const sellMap = new AddActiveMap()
+    sellMap.contructor("SaleCereals")
+    // voivodeship_trade
     
 
 }

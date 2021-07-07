@@ -14,6 +14,12 @@
             position: relative;
             margin-right: 35px;
             padding: 10px;
+           
+        }
+        @media (min-width:770px) {
+            .breadcrumb__element{
+                font-size: 12px;
+            }
         }
 
         .breadcrumb__element::after {
@@ -40,13 +46,30 @@
             font-family: $font-family-F;
             color: black;
             padding: 10px;
+            
         }
-
+        @media (min-width:770px) {
+            .breadcrumbs__control-element{
+                font-size: 12px;
+            }
+        }
         .breadcrumbs__control-img-container {
             display: block;
             max-width: 30px;
             max-height: 30px;
             margin:0 20px;
         }
+        @media (min-width:770px) {
+            .breadcrumbs__control-img-container{
+                max-width: 14px;
+                max-height: 14px;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+@media (min-width:770px) {
+    .breadcrumbs{
+        @include flexParent(row,nowrap,space-between,center);
     }
 }

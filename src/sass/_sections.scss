@@ -19,7 +19,7 @@
 
 }
 
-.main,.banner,.main-contact{
+.main,.banner,.main-contact,.main__productLabel{
     background-color: rgb(255, 255, 255);
     margin-top: 129px;
     
@@ -33,25 +33,25 @@
 }
 
 @media (min-width:770px) {
-    .main,.banner {
+    .main,.banner,.main__productLabel {
         margin-top: 76px;
     }
 }
 
 @media (min-width:1000px) {
-    .main,.banner {
+    .main,.banner,.main__productLabel {
         margin-top: 83px;
     }
 }
 
 @media (min-width:1200px) {
-    .main,.banner {
+    .main,.banner,.main__productLabel{
         margin-top: 99px;
     }
 }
 
 @media (min-width:1700px) {
-    .main,.banner {
+    .main,.banner,.main__productLabel {
         margin-top: 101px;
     }
 }

@@ -10,6 +10,7 @@ module.exports = {
     entry: {
         main: "./src/index.js",
         contact:"./src/indexContact.js",
+        productLabel:"./src/productLabel.js"
     },
     output: {
         filename: "js/[name].js",
@@ -39,6 +40,13 @@ module.exports = {
           chunks:['contact']
 
       }),
+      new HtmlWebpackPlugin({
+        title: "Developmentt",
+        filename:"productLabel.html",
+        template:"./html/productLabel.html",
+        chunks:['productLabel']
+
+    }),
         new CopyPlugin({
           patterns: [
             { from: "public/images", to: "images" },

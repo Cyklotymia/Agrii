@@ -53,6 +53,7 @@ module.exports = {
             // { from: "public/icons", to: "icons" },
           ],
         }),
+        
     ],
     module:{
         rules:[

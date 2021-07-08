@@ -20,13 +20,13 @@ var SimpleLightbox = require('simple-lightbox');
 SimpleLightbox.defaults = {
     
     // add custom classes to lightbox elements
-    elementClass: '',
-    elementLoadingClass: 'slbLoading',
+    elementClass: 'lightbox__popup',
+    elementLoadingClass: 'lightbox__load',
     htmlClass: 'slbActive',
-    closeBtnClass: '',
-    nextBtnClass: '',
-    prevBtnClass: '',
-    loadingTextClass: '',
+    closeBtnClass: 'lightbox__button-close',
+    nextBtnClass: 'lightbox__button-next',
+    prevBtnClass: 'lightbox__button-prev',
+    loadingTextClass: 'lightbox__text',
     
     // customize / localize controls captions
     closeBtnCaption: 'Close',
@@ -55,4 +55,4 @@ SimpleLightbox.defaults = {
     videoRegex: new RegExp(/youtube.com|vimeo.com/) // regex which tests load url for iframe content
     
 };
-new SimpleLightbox({elements: '.imageGallery1 a'});
+new SimpleLightbox({elements: '.lightbox a'});

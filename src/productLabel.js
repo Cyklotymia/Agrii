@@ -3,6 +3,7 @@ import Hamburger from './tools/Hamburger.js'
 import hambList from './tools/variables'
 import DynamicMenu from './tools/menuPopups.js'
 import AddActive from './tools/AddActive.js'
+import Lightbox from './tools/Lightbox.js'
 
 
 
@@ -24,14 +25,14 @@ SimpleLightbox.defaults = {
     elementLoadingClass: 'lightbox__load',
     htmlClass: 'slbActive',
     closeBtnClass: 'lightbox__button-close',
-    nextBtnClass: 'lightbox__button-next',
-    prevBtnClass: 'lightbox__button-prev',
+    nextBtnClass: ' icon-icon_15',
+    prevBtnClass: ' icon-icon_14',
     loadingTextClass: 'lightbox__text',
     
     // customize / localize controls captions
     closeBtnCaption: 'Close',
-    nextBtnCaption: 'Next',
-    prevBtnCaption: 'Previous',
+    nextBtnCaption: '',
+    prevBtnCaption: '',
     loadingCaption: 'Loading...',
     
     bindToItems: true, // set click event handler to trigger lightbox on provided $items
@@ -56,3 +57,5 @@ SimpleLightbox.defaults = {
     
 };
 new SimpleLightbox({elements: '.lightbox a'});
+const productLabelLightbox=new Lightbox();
+productLabelLightbox.contructor("productLabel","productLabel__dot")

@@ -1,0 +1,283 @@
+.productLabel {
+    margin-top: 30px;
+
+    .productLabel__header {
+        font-family: $font-family-F;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .productLabel__container {
+
+        .productLabel__slider-container {
+            @include flexParent(row, wrap, flex-start, center);
+
+
+            .productLabel__slider {
+                order: 2;
+
+                position: relative;
+                margin: 0 auto;
+
+                .productLabel__dots {
+
+                    width: 80vw;
+                    height: 40px;
+                    margin: 0 auto;
+                    @include flexParent(row, nowrap, center, center);
+
+                    .productLabel__dot {
+                        width: 25px;
+                        height: 25px;
+                        background-color: $border-color;
+                        margin: 0 5px;
+                        cursor: pointer;
+                    }
+
+                    .productLabel__dot.active {
+                        background-color: $main-color;
+                    }
+                }
+
+                @media (min-width:550px) {
+                    .productLabel__dots {
+                        display: none;
+                    }
+                }
+
+
+                .productLabel-arrows-container {
+                    display: none;
+
+                    @include positionCenter();
+                    
+                   
+                        height: calc(100% + 100px);
+                        max-width: 50px;
+                        align-content: space-between;
+                    .productLabel__slider-arrow-container {
+                        display: block;
+                        @include flexParent(row,nowrap,center,center);
+                        min-width: 50px;
+                        min-height: 50px;
+                        background-color: #EFEFEF;
+                        color: black;
+
+                        .icon-icon_04 {}
+                    }
+                    //  .productLabel__slider-arrow-container:last-child{
+                         
+                    //  }
+
+                    .productLabel__slider-arrow-container--up {
+                        transform: rotate(180deg);
+
+                        .icon-icon_04 {}
+                    }
+
+
+                }
+                @media (min-width:550px) {
+                    .productLabel-arrows-container{
+                        display: block;
+                        @include flexParent(row,wrap,flex-start,center);
+                    }
+                }
+
+
+                .productLabel__slider-conatiner {
+                    display: none;
+                    max-height: 315px;
+                    overflow: hidden;
+                    margin-left: 10px;
+
+                    .productLabel__slider-element {
+
+
+                        .productLabel__slider-element-content {
+                            height: 100%;
+                            width: auto;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    @media (min-width:550px) {
+                        .productLabel__slider-element {
+                            min-width: 100px;
+                            max-width: 100px;
+                            height: 85px;
+                            margin: 15px 0;
+                            max-height: 30%;
+                            display: block;
+                            border: 1px solid $border-color;
+                        }
+
+                        .productLabel__slider-element.active {
+                            border: 1px solid $main-color;
+                        }
+                    }
+                }
+
+                @media (min-width:550px) {
+                    .productLabel__slider-conatiner {
+                        display: block;
+
+                    }
+
+                }
+            }
+
+            @media (min-width:550px) {
+                .productLabel__slider {
+                    order: 0;
+                }
+            }
+
+            .lightbox {
+                position: relative;
+                width: 100%;
+
+
+                .lightbox__labels-container {
+                    display: none;
+
+                    // @include position(absolute,65%,0%);
+                    .lightbox__labels-element {
+                        // background-color: #C22D0A;
+                        // padding: 5px 10px;
+                        // text-align: center;
+                        // margin-bottom: 10px;
+
+                        .lightbox__labels-element-text {
+                            // font-family: $font-family-F;
+                            // font-weight: $weight-bold;
+                            // color: white;
+
+                        }
+                    }
+
+                    .lightbox__labels-element:nth-child(2) {
+                        background-color: #7AB51D;
+                    }
+
+                }
+
+                .lightbox__link.active {
+                    display: block;
+                    @include flexParent(row,nowrap,center,center);
+                }
+
+                .lightbox__link {
+                    margin: 0 auto;
+                    height: 250px;
+                    max-width: 70%;
+                    border: 1px solid $border-color;
+                    // padding: 10%;
+                    display: none;
+
+                    .lightbox__image {
+                        margin: 0 auto;
+                        width: auto;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+
+                @media (min-width:550px) {
+                    .lightbox__link {
+                        height: 400px;
+                        
+
+                        .lightbox__image {
+                            width: auto;
+                            height: auto;
+                            margin: auto auto;
+                        }
+                    }
+                }
+
+
+            }
+
+
+        }
+
+        @media (min-width:550px) {
+            .productLabel__slider-container {
+                @include flexParent(row, nowrap, flex-start, center);
+
+            }
+        }
+    }
+
+    .productLabel__info {
+        .productLabel__info-basic {
+            .productLabel__info-basic-header {}
+
+            .productLabel__info-basic-condition {
+                .productLabel__info-basic-condition-element {
+                    .icon-icon_19 {}
+
+                    .productLabel__info-basic-condition-element-text {}
+                }
+            }
+
+            .productLabel__info-basic-container {
+                .productLabel__info-basic-element {
+                    .productLabel__info-basic-element-text {}
+                }
+            }
+
+            .productLabel__goto {
+                .productLabel__goto-link {
+                    .icon-icon_22 {}
+
+                    .productLabel__goto-link-text {}
+                }
+            }
+        }
+
+        .productLabel__payment {
+            .productLabel__payment-calendar-container {
+                .productLabel__payment-calendar {
+                    .icon-icon_21 {}
+
+                    .productLabel__payment-input {}
+                }
+            }
+
+            .productLabel__payment-info {
+                .productLabel__payment-info-price {
+                    .productLabel__payment-info-price-text {}
+                }
+            }
+
+            .productLabel__payment-inputs {
+                .productLabel__payment-inputs-text {}
+
+                .roductLabel__payment-inputs-container {
+                    .productLabel__payment-inputs-price {}
+
+                    .productLabel__payment-input-container {
+                        .productLabel__payment-input-icon {
+                            .icon-icon_12 {}
+
+                            .icon-icon_11 {}
+                        }
+                    }
+
+                    .agrii__button-container {
+                        .agrii__button {
+                            .agrii__button-icon {
+                                .icon-icon_02 {}
+                            }
+
+                            .agrii__button-text {}
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

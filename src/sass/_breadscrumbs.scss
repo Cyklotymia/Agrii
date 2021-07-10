@@ -38,7 +38,11 @@
             margin-right: 0;
         }
     }
-
+@media (min-width:770px) {
+    .breadcrumb{
+        overflow-x: unset;
+    }
+}
     .breadcrumbs__control-container {
         margin-top: 10px;
         @include flexParent(row,nowrap,flex-end,center);

@@ -50,6 +50,7 @@
                     display: none;
 
                     @include positionCenter();
+                    z-index: 4;
                     
                    
                         height: calc(100% + 100px);
@@ -62,6 +63,7 @@
                         min-height: 50px;
                         background-color: #EFEFEF;
                         color: black;
+                        
 
                         .icon-icon_04 {}
                     }
@@ -84,12 +86,14 @@
                     }
                 }
 
-
+.productLabel__slider-visible{
+    overflow: hidden; max-height: 315px;
                 .productLabel__slider-conatiner {
                     display: none;
-                    max-height: 315px;
-                    overflow: hidden;
+                   
+                    
                     margin-left: 10px;
+                    transition: .5s linear;
 
                     .productLabel__slider-element {
 
@@ -125,7 +129,7 @@
                     }
 
                 }
-            }
+            }}
 
             @media (min-width:550px) {
                 .productLabel__slider {
@@ -205,6 +209,7 @@
         @media (min-width:550px) {
             .productLabel__slider-container {
                 @include flexParent(row, nowrap, flex-start, center);
+                
 
             }
         }

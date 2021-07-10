@@ -4,6 +4,7 @@ import hambList from './tools/variables'
 import DynamicMenu from './tools/menuPopups.js'
 import AddActive from './tools/AddActive.js'
 import Lightbox from './tools/Lightbox.js'
+import MiniSlider from './tools/MiniSlider'
 
 
 
@@ -59,3 +60,6 @@ SimpleLightbox.defaults = {
 new SimpleLightbox({elements: '.lightbox a'});
 const productLabelLightbox=new Lightbox();
 productLabelLightbox.contructor("productLabel","productLabel__dot")
+
+const lightboxSlider = new MiniSlider()
+lightboxSlider.contruktor("productLabel")

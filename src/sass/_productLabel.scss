@@ -110,11 +110,13 @@
                             min-width: 100px;
                             max-width: 100px;
                             height: 85px;
-                            margin: 15px 0;
+                            margin-top: 15px;
                             max-height: 30%;
                             display: block;
                             border: 1px solid $border-color;
+                            
                         }
+                       
 
                         .productLabel__slider-element.active {
                             border: 1px solid $main-color;
@@ -125,6 +127,8 @@
                 @media (min-width:550px) {
                     .productLabel__slider-conatiner {
                         display: block;
+                        @include flexParent(column,nowrap,center,center);
+
 
                     }
 

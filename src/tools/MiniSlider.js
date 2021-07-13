@@ -37,17 +37,17 @@ export default class MiniSlider {
         this.sliderContainer.style.transition = "none"
 
     }
-    changeHeightDown=()=>{
-        
+    changeHeightDown = () => {
+
         this.sliderContainer.style.transform = `translateY(${-this.heightOfItem}px)`
-this.sliderContainer.style.transition = "0.2s"
+        this.sliderContainer.style.transition = "0.2s"
         setTimeout(() => {
             this.sliderContainer.style.transform = `translateY(0px)`
-            this.sliderContainer.appendChild(this.sliderElements[0])  
+            this.sliderContainer.appendChild(this.sliderElements[0])
             this.sliderContainer.style.transition = "none"
-            
+
         }, 100)
-        
+
     }
     readArrow = (e) => {
 
@@ -72,12 +72,12 @@ this.sliderContainer.style.transition = "0.2s"
     }
     changeSlideDown = () => {
         this.countHeight(this.sliderElements[0])
-        
-        
+
+
         //  this.sliderContainer.appendChild(this.sliderElements[0])   
-        
+
         this.changeHeightDown()
-        
+
         this.updateSliderElements()
         this.changePhoto()
 

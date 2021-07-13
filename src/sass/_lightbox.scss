@@ -47,8 +47,9 @@
                     .slbImageWrap {
                         .slbImage {
                             width: auto;
+                            max-width: 90%;
                             margin: auto auto;
-                            height: 80%;
+                            height: auto;
                         }
 
                         .slbCaption {

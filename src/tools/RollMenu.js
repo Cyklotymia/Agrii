@@ -16,6 +16,15 @@ export default class RollMenu {
                 this.addActive(e)
             })
         })
+        window.addEventListener('resize',()=>{
+            this.section.querySelectorAll(`.${this.classOfElementToShow}`).forEach(element=>{
+                element.style.height=0;
+                element.style.opacity=0;
+            })
+            this.section.querySelectorAll(".js__addActive").forEach(element=>{
+                element.classList.remove("active")
+            })
+        })
     }
 
 
@@ -23,10 +32,12 @@ export default class RollMenu {
         
         const searchInElement =e.target.closest(".js__search-in")
         const arrOfElementsToCount= searchInElement.querySelectorAll(`.${this.classOfElementToCount}`)
+        
        
         let sumOfHeight=0
         arrOfElementsToCount.forEach(elementToCount=>{
             sumOfHeight+=elementToCount.offsetHeight;
+            console.log(sumOfHeight);
            
         })
         this.addStyles(sumOfHeight,searchInElement,e)
@@ -38,7 +49,7 @@ export default class RollMenu {
         const itemToShow =searchInElement.querySelector(`.${this.classOfElementToShow}`)
         itemToShow.style.opacity="1"
         itemToShow.style.height=`${sumOfHeight}px`
-        console.log((e.target.closest(".js__addActive")));
+        
         if (e.target.closest(".js__addActive").classList.contains("active")) {
             itemToShow.style.opacity="0"
         itemToShow.style.height=`0px`

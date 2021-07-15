@@ -2,80 +2,316 @@
 
     .goTo__element {
         .goTo__header {
-            .goTo__text {}
+            position: relative;
+            z-index: 3;
+            padding: 15px 10px;
+            font-family: $font-family-F;
+            font-weight: $weight-bold;
+            color: black;
+            text-transform: uppercase;
+            border-bottom: 1px solid $border-color;
+
+            @include flexParent(row, nowrap, space-between, center);
+
+            .goTo__text {
+                font-size: 14px;
+            }
 
             .goTo__header-icon-container {
-                .icon-icon_10 {}
+                transition: .5s;
+
+                .icon-icon_10 {
+                    font-size: 11px;
+                }
             }
         }
 
         .goTo__element-popup {
-            .goTo__element-popup-text {}
+            height: 0;
+            opacity: 0;
+            transition: height .3s linear, .3s opacity .1s;
+            // @include flexParent(row,wrap,flex-start,flex-start);
+
+            .goTo__element-popup-text {
+                font-family: $font-family-F;
+                padding: 10px;
+
+            }
 
             .goTo__element-popup-element {
-                .goTo__element-popup-element-text {}
+                padding: 10px;
+                border-bottom: 1px solid $border-color;
+                font-family: $font-family-F;
+                @include flexParent(row, nowrap, space-between, center);
 
-                .goTo__element-popup-element-text--border {}
+                .goTo__element-popup-element-text {
+                    text-align: left;
+                    min-width: 20%;
+                    padding-left: 20px;
+                    @include flexParent(row, nowrap, flex-start, center);
+                }
+
+                .goTo__element-popup-element-text--border {
+                    border-left: 1px solid $border-color;
+                    width: 20%;
+                    padding-left: 20px;
+                    height: 30px;
+                    @include flexParent(row, nowrap, flex-start, center);
+                }
+            }
+
+            .goTo__element-popup-element:last-child {
+                background-color: #efefef;
+                text-transform: uppercase;
             }
 
             .goTo__element-popup-array {
-                .goTo__element-popup-vertical-container{
-                    .goTo__element-popup-vertical-element{
-                        .goTo__element-popup-vertical-header{
+                @include flexParent(row, nowrap, flex-start, flex-start);
+                height: 350px;
 
-                        }
-                        .goTo__element-popup-vertical-text{
+                .goTo__element-popup-vertical-container {
+                    @include flexParent(column, nowrap, flex-start, flex-start);
+                    width: 100%;
+                    height: 100%;
 
+                    .goTo__element-popup-vertical-element {
+                        font-family: $font-family-F;
+                        width: 100%;
+                        border-top: 1px solid $border-color;
+                        min-height: 80px;
+                        @include flexParent(row, nowrap, flex-start, center);
+
+                        .goTo__element-popup-vertical-header {
+                            font-weight: $weight-bold;
+                            @include flexParent(row, nowrap, flex-start, center);
+
+                            height: 50px;
+                            width: 100%;
                         }
+
+                        .goTo__element-popup-vertical-text {
+
+                            border-left: 1px solid $border-color;
+                            padding: 10px;
+
+                            @include flexParent(row, nowrap, flex-start, center);
+                        }
+
+
                     }
-                    .goTo__element-popup-vertical-element--full{
+
+                    .goTo__element-popup-vertical-element:nth-child(1) {
+                        border-top: none;
+                    }
+
+                    .goTo__element-popup-vertical-element--full {
+                        position: relative;
+                        height: 250px;
+                        font-size: 15px;
+
+                        .goTo__element-popup-vertical-text {
+                            border-left: none;
+                        }
+
+                    }
+
+                    .goTo__element-popup-vertical-element--full::before {
+                        display: block;
+                        @include position(absolute, 0, 50%);
+                        transform: translateY(-50%);
+                        height: 60%;
+                        content: "";
+                        width: 1px;
+                        background-color: $border-color;
+                    }
+                }
+
+                .goTo__element-popup-vertical-container:nth-child(1) {
+                    .goTo__element-popup-vertical-element:nth-child(3) {
+                        background-color: #efefef;
+
+
+                    }
+
+                    .goTo__element-popup-vertical-text {
+                        border-left: none;
+
+                    }
+
+                }
+
+                .goTo__element-popup-vertical-container:nth-child(2) {
+                    .goTo__element-popup-vertical-element:nth-child(3) {
+                        background-color: #efefef;
+
+
+                    }
+
+                }
+
+                .goTo__element-popup-vertical-container:nth-child(3) {
+                    height: 100%
+                }
+            }
+
+            // .goTo__element-popup-text-container {
+            //     .goTo__element-popup-text {}
+            // }
+
+            .goTo__element-popup-download-container {
+
+                font-size: 11px;
+                font-weight: $weight-bold;
+                height: 70px;
+                @include flexParent(row, nowrap, flex-start, center);
+
+                .goTo__element-popup-download-icon-container {
+                    height: 85%;
+                    border: 1px solid $border-color;
+                    border-right: none;
+                    @include flexParent(row, nowrap, center, center);
+                    width: 50px;
+
+                    .icon-icon_26 {
+                        color: $main-color;
+                        font-size: 25px;
 
                     }
                 }
-            }
-            .goTo__element-popup-text-container{
-                .goTo__element-popup-text{}
-            }
-            .goTo__element-popup-download-container{
-               .goTo__element-popup-download-icon-container{
-                   .icon-icon_26{
 
-                   }
-               } 
-               .goTo__element-popup-download-text{
+                .goTo__element-popup-download-text {
+                    height: 85%;
+                    border: 1px solid $border-color;
+                    border-right: none;
+                    @include flexParent(row, nowrap, center, center);
+                    width: 50%;
+                    font-family: $font-family-F;
 
-               }
-               .goTo__element-popup-download-button{
-                   .agrii__button-container{
-                    .agrii__button{
-                        .agrii__button-text{
+                }
 
-                        }
-                        .agrii__button-icon{
-                            .icon-icon_05{
+                .goTo__element-popup-download-button {
+                    height: 85%;
+                    width: 200px;
+                    padding: 0 10px;
 
+
+
+                    @include flexParent(row, nowrap, space-between, center);
+                    border: 1px solid $border-color;
+
+                    .goTo__element-popup-download-text {
+                        font-weight: $weight-medium;
+                        margin-right: 10px;
+                        border: none;
+                        height: auto;
+                        font-family: $font-family-F;
+
+                    }
+
+                    .agrii__button-container {
+                        height: 40px;
+                        width: 120px;
+
+                        .agrii__button {
+                            background-color: $main-color;
+                            padding: 0 5px 0 0;
+
+                            .agrii__button-text {
+                                margin-right: 20px;
+                            }
+
+                            .agrii__button-icon {
+                                .icon-icon_05 {
+                                    font-size: 15px;
+                                }
                             }
                         }
                     }
-                   }
-               }
+
+                    .agrii__button-container::after {
+                        border-color: $main-color;
+                    }
+                }
             }
-            .goTo__element-popup-item{
-                .goTo__element-popup-item-img-container{
-                   .goTo__element-popup-item-img{
 
-                   } 
-                }
-                .goTo__element-popup-item-text-container{
-                    .goTo__element-popup-item-text-small{
+            .goTo__products-container {
+                @include flexParent(row, wrap, center, center);
 
+                .goTo__element-popup-item {
+                    font-family: $font-family-F;
+                    position: relative;
+                    @include flexParent(column, wrap, center, center);
+                    max-width: 200px;
+                    margin: 20px;
+                    padding: 20px;
+
+                    .goTo__element-popup-item-img-container {
+                        max-width: 100px;
+                        // .goTo__element-popup-item-img {}
                     }
-                    .goTo__element-popup-item-text{
-                        
+
+                    .goTo__element-popup-item-text-container {
+                        .goTo__element-popup-item-text-small {
+                            color: rgb(151, 151, 151);
+                            font-size: 11px;
+                            margin-bottom: 5px;
+                        }
+
+                        .goTo__element-popup-item-text {
+                            font-weight: $weight-bold;
+                        }
                     }
                 }
+
+                @media (min-width:500px) {
+                    .goTo__element-popup-item:nth-child(even):after {
+                        content: "";
+                        height: 90%;
+                        width: 1px;
+                        background-color: $border-color;
+                        display: block;
+                        @include position(absolute, 0, 50%);
+                        transform: translateY(-50%)
+                    }
+
+                }
+                @media (min-width:750px) {
+                    .goTo__element-popup-item::after {
+                        content: "";
+                        height: 90%;
+                        width: 1px;
+                        background-color: $border-color;
+                        display: block;
+                        @include position(absolute, 0, 50%);
+                        transform: translateY(-50%)
+                    }
+                    .goTo__element-popup-item:nth-child(3n+1)::after{
+display: none;
+                    }
+
+                }
+
+
+            }
+
+        }
+    }
+
+    .goTo__element.active {
+
+        .goTo__header-icon-container {
+            transform: rotate(180deg);
+        }
+
+        .goTo__element-popup {
+            height: auto;
+            opacity: 1;
+
+            .goTo__element-popup-text {
+                display: block;
             }
         }
+
     }
 
 }

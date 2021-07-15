@@ -5,6 +5,7 @@ import DynamicMenu from './tools/menuPopups.js'
 import AddActive from './tools/AddActive.js'
 import Lightbox from './tools/Lightbox.js'
 import MiniSlider from './tools/MiniSlider'
+import RollMenu from './tools/RollMenu.js'
 
 
 
@@ -63,3 +64,5 @@ productLabelLightbox.contructor("productLabel","productLabel__dot")
 
 const lightboxSlider = new MiniSlider()
 lightboxSlider.contruktor("productLabel")
+const asideMenu = new RollMenu()
+asideMenu.contructor("goTo","goTo__header","js__countElement","goTo__element-popup")

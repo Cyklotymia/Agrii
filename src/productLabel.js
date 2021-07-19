@@ -6,6 +6,7 @@ import AddActive from './tools/AddActive.js'
 import Lightbox from './tools/Lightbox.js'
 import MiniSlider from './tools/MiniSlider'
 import RollMenu from './tools/RollMenu.js'
+import MiniSliderPro from './tools/MiniSliderPro'
 
 
 
@@ -66,3 +67,4 @@ const lightboxSlider = new MiniSlider()
 lightboxSlider.contruktor("productLabel")
 const asideMenu = new RollMenu()
 asideMenu.contructor("goTo","goTo__header","js__countElement","goTo__element-popup")
+const prodComplSlider= new MiniSliderPro("prodCompl","horizontal") // horizontal / vertical

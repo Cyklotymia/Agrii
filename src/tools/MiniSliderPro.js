@@ -28,15 +28,15 @@ export default class MiniSliderPro {
         if (e.target.closest(".js__MiniSlider-arrow-reduce")) {
             const lastElement = this.elementsOfSlider[this.elementsOfSlider.length - 1]
             this.showLastElement(lastElement)
-            this.animateLeft(lastElement.offsetWidth, lastElement)
+            this.animateLeft(lastElement.offsetWidth)
 
         } else if (e.target.closest(".js__MiniSlider-arrow-increase")) {
             const firstElement = this.elementsOfSlider[0]
-            this.showFirstElement(firstElement)
+            this.animateRight(firstElement.offsetWidth,firstElement)
         }
     }
     
-    animateLeft = (sizeOfElement, lastElement) => {
+    animateLeft = (sizeOfElement) => {
         this.sliderContainer.style.transform = `translateX(${-sizeOfElement}px)`
 
         setTimeout(() => {
@@ -45,6 +45,18 @@ export default class MiniSliderPro {
 
         }, 100)
         this.sliderContainer.style.transition = "none"
+
+    }
+    animateRight=(sizeOfElement,firstElement)=>{
+        this.sliderContainer.style.transform = `translateX(${-sizeOfElement}px)`
+        this.sliderContainer.style.transition = "0.2s"
+        setTimeout(() => {
+            this.sliderContainer.style.transform = `translateX(0px)`
+
+            this.showFirstElement(firstElement)
+            this.sliderContainer.style.transition = "none"
+
+        }, 100)
 
     }
     showLastElement = (lastElement) => {
@@ -57,7 +69,41 @@ export default class MiniSliderPro {
         this.sliderContainer.appendChild(firstElement)
     }
     countHeight = (e) => {
-        console.log("licze wysokość");
+        this.updateElementsOfSlider()
+        if (e.target.closest(".js__MiniSlider-arrow-reduce")) {
+            const lastElement = this.elementsOfSlider[this.elementsOfSlider.length - 1]
+            this.showLastElement(lastElement)
+            this.animateDown(lastElement.offsetHeight)
+
+        } else if (e.target.closest(".js__MiniSlider-arrow-increase")) {
+            const firstElement = this.elementsOfSlider[0]
+            this.animateUp(firstElement.offsetHeight,firstElement)
+        }
+    }
+
+    animateDown = (sizeOfElement) => {
+        this.sliderContainer.style.transform = `translateY(${-sizeOfElement}px)`
+
+        setTimeout(() => {
+            this.sliderContainer.style.transition = ".2s"
+            this.sliderContainer.style.transform = `translateY(0px)`
+
+        }, 100)
+        this.sliderContainer.style.transition = "none"
+
+    }
+
+    animateUp=(sizeOfElement,firstElement)=>{
+        this.sliderContainer.style.transform = `translateY(${-sizeOfElement}px)`
+        this.sliderContainer.style.transition = "0.2s"
+        setTimeout(() => {
+            this.sliderContainer.style.transform = `translateY(0px)`
+
+            this.showFirstElement(firstElement)
+            this.sliderContainer.style.transition = "none"
+
+        }, 100)
+
     }
     listeners = () => {
         this.arrowReduce.addEventListener("click", (e) => {

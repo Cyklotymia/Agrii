@@ -1,0 +1,46 @@
+.dosage{
+    display: none;
+    .dosage__conatiner{
+        margin-top: 50px;
+        @include flexParent(row,nowrap,flex-start,flex-start);
+        .dosage__column{
+            font-family: $font-family-M;
+            
+            .dosage__header{
+                font-weight: $weight-medium;
+                border-bottom: 1px solid $border-color;
+                width: 100%;
+                
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                font-size: 19px
+            }
+            .dosage__text{
+                @include flexParent(row,nowrap,flex-start,center);
+                font-weight: $weight-light;
+
+                padding-right: 20px;
+                height: 60px;
+                font-size: 16px;
+            }
+            .dosage__text:nth-child(2n+1){
+                background-color: #EFEFEF;
+            }
+        }
+        .dosage__column:nth-child(1){
+            width: 15%;
+            
+        }
+        .dosage__column:nth-child(2){
+            width: 20%;
+        }
+        .dosage__column:nth-child(3){
+            width: 65%
+        }
+    }
+}
+@media (min-width:770px) {
+    .dosage{
+        display: block;
+    }
+}

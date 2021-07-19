@@ -141,6 +141,7 @@
             }
         }
     }
+    
 
     @media (min-width:550px) {
         .variants__element {
@@ -158,6 +159,13 @@
 @media (min-width:550px) {
     .variants__container {
         @include flexParent(row, wrap, center, center);
+    }
+
+}
+
+@media (min-width:1300px) {
+    .variants__container {
+        @include flexParent(row, wrap, space-between, center);
     }
 
 }

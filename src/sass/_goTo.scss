@@ -16,6 +16,11 @@
             .goTo__text {
                 font-size: 14px;
             }
+            @media (min-width:770px) {
+                .goTo__text{
+                    font-size: 16px;
+                }
+            }
 
             .goTo__header-icon-container {
                 transition: .5s;
@@ -24,8 +29,35 @@
                     font-size: 11px;
                 }
             }
+            @media (min-width:770px) {
+                .goTo__header-icon-container{
+                    display: none;
+                }
+            }
         }
-
+@media (min-width:770px) {
+    .goTo__header{
+        border-bottom: none;
+        text-transform: none;
+        transition: .3s;
+        position: relative;
+        
+    }
+    .goTo__header:hover{
+        color: $main-color;
+        
+    }
+    .goTo__header:hover::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $main-color;
+        @include position(absolute,0,100%);
+        
+    }
+    
+}
         .goTo__element-popup {
             height: 0;
             opacity: 0;
@@ -295,7 +327,22 @@ display: none;
             }
 
         }
+        @media (min-width:770px){
+            .goTo__element-popup{
+                display: none;
+            }
+        }
     }
+    @media (min-width:770px) {
+        .goTo__element{
+            margin-right: 10px;
+        }
+        .goTo__element:last-child{
+            display: none;
+        }
+        
+    }
+  
 
     .goTo__element.active {
 
@@ -315,3 +362,9 @@ display: none;
     }
 
 }
+ @media (min-width:770px) {
+        .goTo__container{
+            @include flexParent(row,nowrap,flex-start,center);
+            margin-top: 50px;
+        }
+    }

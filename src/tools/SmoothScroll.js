@@ -1,10 +1,11 @@
 export default class SmoothScroll {
     contructor(rootClass, specialHeight = 0) {
+        
         this.sectionOfPanel = document.querySelector(`.${rootClass}`)
         this.arrOfControlElements = this.sectionOfPanel.querySelectorAll(`.js__controlElement`)
         this.heightOfElement = null
         this.specialHeight = specialHeight
-
+        
         this.listeners()
     }
     listeners = () => {
@@ -24,8 +25,9 @@ export default class SmoothScroll {
 
         let datasetOfClickedElement = e.target.closest("[data-scroll]").dataset.scroll
         
-
+        
         const elementsWithSameData = document.querySelectorAll(`[data-scroll="${datasetOfClickedElement}"]`)
+        
 
 
         elementsWithSameData.forEach(elementWithSameData => {

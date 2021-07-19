@@ -37,7 +37,7 @@ export default class RollMenu {
         let sumOfHeight=0
         arrOfElementsToCount.forEach(elementToCount=>{
             sumOfHeight+=elementToCount.offsetHeight;
-            console.log(sumOfHeight);
+           
            
         })
         this.addStyles(sumOfHeight,searchInElement,e)

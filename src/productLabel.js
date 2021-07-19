@@ -7,6 +7,7 @@ import Lightbox from './tools/Lightbox.js'
 import MiniSlider from './tools/MiniSlider'
 import RollMenu from './tools/RollMenu.js'
 import MiniSliderPro from './tools/MiniSliderPro'
+import SmoothScroll from './tools/SmoothScroll';
 
 
 
@@ -68,3 +69,6 @@ lightboxSlider.contruktor("productLabel")
 const asideMenu = new RollMenu()
 asideMenu.contructor("goTo","goTo__header","js__countElement","goTo__element-popup")
 const prodComplSlider= new MiniSliderPro("prodCompl","horizontal") // horizontal / vertical
+// const scrollSections=new SmoothScroll("main__productLabel")
+const scrollSections=new SmoothScroll()
+scrollSections.contructor("main__productLabel",13)

@@ -1,0 +1,112 @@
+.productDesc {
+    .productDesc__text {
+        margin-top: 20px;
+        font-family: $font-family-M;
+        font-weight: $weight-light;
+        font-size: 20px;
+
+    }
+
+    .productDesc__text--small {
+        font-family: $font-family-M;
+        font-weight: $weight-light;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .productDesc__img-container {
+        margin-top: 20px;
+        height: 100px;
+
+        .productDesc__img {
+            width: auto;
+
+        }
+    }
+
+    .productDesc__advantages-container {
+        @include flexParent(row, nowrap, space-between, flex-start);
+        margin-top: 70px;
+
+        .productDesc__advantages {
+            width: 70%;
+            margin-right: 20px;
+            max-width: 550px;
+
+            .productDesc__advantages-header {
+                font-family: $font-family-F;
+                font-size: 25px;
+                margin-bottom: 25px;
+            }
+            @media (min-width:1500px) {
+                .productDesc__advantages-header{
+                    font-size: 30px;
+                } 
+            }
+
+            .productDesc__advantages-list {
+                .productDesc__advantages-list-element {
+                    font-family: $font-family-M;
+                    font-weight: $weight-light;
+                    margin-bottom: 20px;
+                    @include flexParent(row,nowrap,flex-start,flex-start);
+                    font-size: 20px;
+                }
+                .productDesc__advantages-list-element::before {
+                    content: "";
+                    display: block;
+                    min-height: 10px;
+                    min-width: 10px;
+                    background-color: $main-color;
+                    border-radius: 50%;
+                    margin-top: 6px;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .productDesc__benefits {
+            max-width: 500px;
+            .productDesc__benefits-header {
+                font-family: $font-family-F;
+                font-size: 25px;
+                margin-bottom: 25px;
+            }
+            @media (min-width:1500px) {
+                .productDesc__benefits-header{
+                    font-size: 30px;
+                } 
+            }
+
+            .productDesc__benefits-list {
+                .productDesc__benefits-list-element {
+                    @include flexParent(row, nowrap, flex-start, flex-start);
+                    font-family: $font-family-M;
+                    font-weight: $weight-light;
+                    font-size: 20px;
+
+                    .icon-icon_23 {
+                        color: $main-color;
+                        margin-right: 14px;
+                    }
+
+                    .productDesc__benefits-list-element-text {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width:1200px) {
+        .productDesc__advantages-container{
+            @include flexParent(row, nowrap, flex-start, flex-start);
+        }
+    }
+
+    .productDesc__video {
+        
+        margin: 50px 0;
+        @include flexParent(row,nowrap,center,center);
+    }
+
+}

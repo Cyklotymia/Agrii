@@ -5,10 +5,13 @@ export default class SmoothScroll {
         this.arrOfControlElements = this.sectionOfPanel.querySelectorAll(`.js__controlElement`)
         this.heightOfElement = null
         this.specialHeight = specialHeight
-        
+        this.widthOfScreen=0
         this.listeners()
     }
     listeners = () => {
+        window.addEventListener('resize',()=>{
+            this.widthOfScreen=window.innerWidth
+        })
         this.arrOfControlElements.forEach(controlElement => {
             controlElement.addEventListener("click", (e) => {
                 this.readHight()
@@ -22,6 +25,10 @@ export default class SmoothScroll {
 
     }
     goIntoSection = (e) => {
+
+        if(this.widthOfScreen<770){
+            return
+        }
 
         let datasetOfClickedElement = e.target.closest("[data-scroll]").dataset.scroll
         

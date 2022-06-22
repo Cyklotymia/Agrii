@@ -1,0 +1,212 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2.5vw 0 2.5vw;
+}
+
+.agrii__button-container {
+    display: block;
+    text-decoration: none;
+    height: 30px;
+    width: 180px;
+    cursor: pointer;
+
+
+
+    .agrii__button {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 17px 30px;
+        @include flexParent(row, nowrap, center, center);
+        transition: 0.3s;
+
+        .agrii__button-text {
+            font-family: $font-family-F;
+            font-weight: $weight-bold;
+            color: black;
+            letter-spacing: -0.24px;
+            font-size: 12px;
+            margin-right: 34px;
+            text-decoration: none;
+        }
+
+        .agrii__button-icon {
+            position: relative;
+
+            .icon-icon_05 {
+                color: black;
+                @include positionCenter();
+            }
+        }
+    }
+}
+
+.agrii__button-container::after {
+    display: block;
+    content: "";
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: white 1px solid;
+    transform: translate(5%, -90%);
+}
+
+.agrii__button-container:hover .agrii__button {
+    transform: translate(5%, 10%);
+
+
+
+}
+
+.agrii__mask {
+    background: transparent linear-gradient(90deg, #000000 0%, #54545400 100%) 0% 0% no-repeat padding-box;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+    opacity: 0.48;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.agrii__header-conatiner {
+    margin-top: 70px;
+    font-family: $font-family-F;
+    
+    
+
+
+    .agrii__header-text-container {
+        position: relative;
+        @include flexParent(row, nowrap, center, center);
+        
+
+        .agrii__header-text {
+            display: block;
+            font-size: 7vw;
+            font-weight: $weight-bold;
+            padding: 0 10px;
+            background-color: white;
+            position: relative;
+            z-index: 3;
+            // width: max-content;
+            max-width: 100%;
+        }
+
+    }
+
+}
+
+.agrii__header-text-container::before {
+    background-color: $main-color;
+    content: "";
+    height: 3px;
+    width: 100%;
+    @include positionCenter();
+
+    // z-index:-1;
+}
+
+.agrii__header-text-small {
+    margin-top: 20px;
+    font-weight: $weight-medium;
+    line-height: 0.9;
+    margin-bottom: 50px;
+}
+
+@media (min-width:600px) {
+    .agrii__header-conatiner {
+       
+        .agrii__header-text-container {
+            @include flexParent(row,nowrap,flex-start,center);
+            padding-left: 5%;
+            .agrii__header-text {
+
+                font-size: 42px;
+
+            }
+
+        }
+
+    }
+
+    .agrii__header-text-small {
+        font-size: 16px;
+        font-weight: $weight-bold;
+    }
+}
+
+
+.agrii__input {
+    position: relative;
+    background-color: white;
+    appearance: none;
+    border: 1px solid $border-color!important;
+    min-height: 20px;
+    min-width: 20px;
+    cursor: pointer;
+    transition: .3s;
+    padding: 2px;
+
+}
+@media (min-width:1200px) {
+    .agrii__input{
+        min-height: 25px;
+        min-width: 25px;
+    }
+}
+
+.agrii__input::after {
+    content: "";
+    @include positionCenter();
+    opacity: 0;
+    background-color: $main-color;
+    width: 70%;
+    height: 70%;
+    transition: .3s;
+
+}
+
+.agrii__input:checked::after {
+    opacity: 1;
+}
+
+
+.agrii__contact-header-container{
+    font-family: $font-family-F;
+    .agrii__contact-header{
+        font-weight: $weight-bold;
+        font-size: 20px;
+    }
+    .agrii__contact-text{
+        font-size: 13px;
+    }
+}
+
+.agrii__contact-info{
+    margin-top: 30px;
+    .agrii__contact-info-element{
+        font-family: $font-family-M;
+        @include flexParent(row,nowrap,flex-start,center);
+        margin-bottom: 20px;
+        .agrii__contact-info-element-img-container{
+            max-height: 30px;
+            min-height: 30px;
+            max-width: 30px;
+            min-width: 30px;
+            margin-right: 20px;
+            
+            .agrii__contact-info-element-img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .agrii__contact-info-element-text{
+            font-size: 15px;
+        }
+    }
+}

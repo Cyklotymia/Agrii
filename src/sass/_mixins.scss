@@ -1,0 +1,28 @@
+@mixin font-face($name, $file, $weight, $format) {
+    @font-face {
+        font-family: "#{$name}";
+        font-weight: #{$weight};
+        
+        src: url("../fonts/#{$file}.#{$format}");
+
+    }
+}
+@mixin position($position,$left,$top){
+    position:$position;
+    left:$left;
+    top:$top;
+}
+@mixin flexParent($direction,$wrap,$justify-content,$align-items){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin positionCenter(){
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

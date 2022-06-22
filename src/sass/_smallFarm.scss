@@ -1,0 +1,406 @@
+.smallFarms {
+    max-width: 100%;
+    .bigFarms__map-container--small{
+   
+    //    .bigFarms__map--small{
+       
+    //    }
+       @media (min-width:770px) {
+        .bigFarms__map--small{
+            flex-basis: 50%;
+           
+        }
+    } 
+    .smallFarms__info-container {
+        margin-top: 30px;
+        padding: 0 10px;
+
+        .smallFarms__info-header {
+            font-family: $font-family-F;
+            font-weight: $weight-bold;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        @media (min-width:770px) {
+            .smallFarms__info-header{
+                font-size: 15px;
+            }
+        }
+        @media (min-width:1000px) {
+            .smallFarms__info-header{
+                font-size: 20px;
+            }
+        }
+        @media (min-width:1200px) {
+            .smallFarms__info-header{
+                font-size: 26px;
+                margin-bottom: 30px;
+            }
+        }
+
+        
+        @media (min-width:1200px) {
+          .js-Dropdown-title{
+            height: 40px;
+            font-size: 15px;
+        }  
+
+        
+        }
+
+        @media (min-width:1500px) {
+            .js-Dropdown-title{
+              height: 60px;
+              font-size: 20px;
+              
+          }  
+          }
+        
+        // .smallFarms__info-select-container {}
+
+        .smallFarms__info-text-container {
+            .smallFarms__info-text {
+                font-family: $font-family-F;
+                font-weight: $weight-bold;
+                font-size: 17px;
+                margin: 20px 0;
+            }
+            @media (min-width:770px) {
+                .smallFarms__info-text{
+                    font-size: 12px;
+                }
+            }
+            @media (min-width:1000px) {
+                .smallFarms__info-text{
+                    font-size: 16px;
+                }
+            }
+            @media (min-width:1400px) {
+                .smallFarms__info-text{
+                    padding-top: 40px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+
+        .smallFarms__choices {
+            margin-bottom: 20px;
+
+            .smallFarms__choice-container {
+                @include flexParent(row, nowrap, flex-start, center);
+
+                .agrii__input {
+                    margin-right: 10px
+                }
+
+                .smallFarms__choice-label {
+                    font-weight: $weight-light;
+                    font-size: 18px;
+                    font-family: $font-family-M;
+                    padding: 10px 0;
+                }
+                @media (min-width:770px) {
+                    .smallFarms__choice-label{
+                        font-size: 12px;
+                    }
+                }
+                @media (min-width:1000px) {
+                    .smallFarms__choice-label{
+                        font-size: 15px;
+                    }
+                }
+                @media (min-width:1200px) {
+                    .smallFarms__choice-label{
+                        font-size: 18px;
+                    }
+                }
+                @media (min-width:1400px) {
+                    .smallFarms__choice-label{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        @media (min-width:1400px) {
+            .smallFarms__choices{
+            @include flexParent(row,nowrap,space-between,center);
+        margin-bottom:50px}
+        }
+
+        .smallFarms__info-legend-container {
+            margin-bottom: 20px;
+            font-family: $font-family-M;
+
+            .smallFarms__info-legend-element {
+                margin-bottom: 5px;
+
+                .smallFarms__info-legend-element-text {
+                    font-weight: $weight-light;
+                    @include flexParent(row, nowrap, flex-start, center);
+                    font-size: 18px;
+                }
+                @media (min-width:770px) {
+                    .smallFarms__info-legend-element-text{
+                        font-size: 12px;
+                    }
+                }
+                @media (min-width:1000px) {
+                    .smallFarms__info-legend-element-text{
+                        font-size: 15px;
+                    }
+                }
+                @media (min-width:1400px) {
+                    .smallFarms__info-legend-element-text{
+                        font-size: 18px;
+                    }
+                }
+
+                .smallFarms__info-legend-element-text::before {
+                    content: "";
+                    width: 40px;
+                    height: 4px;
+                    background-color: $main-color;
+                    display: block;
+                    margin-right: 10px;
+                }
+                @media (min-width:770px) {
+                    .smallFarms__info-legend-element-text::before{
+                        width:30px;
+                    }
+                }
+                @media (min-width:1000px) {
+                    .smallFarms__info-legend-element-text::before{
+                        width:40px;
+                    }
+                }
+                @media (min-width:1400px) {
+                    .smallFarms__info-legend-element-text::before{
+                        width:44px;
+                    }
+                }
+
+            }
+
+            .smallFarms__info-legend-element:nth-child(2) {
+                .smallFarms__info-legend-element-text::before {
+                    background-color: $border-color;
+                }
+            }
+        }
+    }
+@media (min-width:770px) {
+        .smallFarms__info-container{
+            margin: 0;
+            width: 40%;
+           
+        }
+        @media (min-width:1400px) {
+            .smallFarms__info-container{
+                margin: auto 0;
+                width: 55%;
+               
+            }
+    }}
+    }
+    
+    
+  @media (min-width:770px) {
+    .bigFarms__map-container--small{
+        @include flexParent(row,nowrap,space-around,flex-start);
+        background-image:url("/public/images/contactUnderBg.png");
+    }
+}  
+}
+
+
+
+.smallFarms__shops-container {
+    padding: 0 10px;
+    margin-top: 50px;
+    .smallFarms__shops-none{
+        display: none;
+        width: 90%;
+        border:1px $border-color solid;
+        margin: 0 auto;
+        height: 100%;
+        min-height: 100px;
+        background-color: #f8f8f8;
+        margin-bottom: 20px;
+        .smallFarms__shops-none-text{
+            font-family: $font-family-F;
+            color: gray;
+            width: 100%;
+            text-align: center;
+            font-size: 15px;
+            line-height: 100px;
+        }
+    }
+    .smallFarms__shops-none.active{
+        display: block;
+    }
+    .smallFarms__shops-element {
+        display: none;
+        border: 4px $border-color solid;
+        padding: 20px 15px;
+        margin-bottom: 50px;
+        max-width: 540px;
+
+        .smallFarms__shops-info-container {
+            margin-bottom: 30px;
+
+            .smallFarms__shops-element-header {
+                font-family: $font-family-M;
+                font-size: 20px;
+                font-weight: $weight-bold;
+            }
+            @media (min-width:770px) {
+                .smallFarms__shops-element-header{
+                    font-size: 15px;
+                }
+            }
+            @media (min-width:1200px) {
+                .smallFarms__shops-element-header{
+                    font-size: 20px;
+                }
+            }
+
+            .smallFarms__shops-element-text {
+                margin-top: 10px;
+                font-family: $font-family-M;
+                font-weight: $weight-light;
+                color: #7f7f7f;
+
+            }
+            @media (min-width:770px) {
+                .smallFarms__shops-element-text{
+                    font-size: 12px;
+                }
+            }
+            @media (min-width:1200px) {
+                .smallFarms__shops-element-text{
+                    font-size: 20px;
+                }
+            }
+        }
+       
+
+        .smallFarms__shops-contact-container {
+
+            .smallFarms__shops-contact-element {
+                @include flexParent(row, wrap, flex-start, center);
+                font-family: $font-family-M;
+                font-weight: $weight-light;
+                margin-bottom: 15px;
+                
+
+                .smallFarms__shops-contact-img-container {
+                    min-width: 25px;
+                    max-width: 25px;
+                    margin-right: 10px;
+                    // .smallFarms__shops-contact-img {}
+                }
+                @media (min-width:770px) {
+                    .smallFarms__shops-contact-img-container{
+                        min-width: 20px;
+                    max-width: 20px;
+                    min-height: 10px;
+                    
+                    }
+                }
+                @media (min-width:1200px) {
+                    .smallFarms__shops-contact-img-container{
+                   margin-right: 18px;
+                    }
+                }
+
+                .smallFarms__shops-contact-text {
+                    width: 80%;
+                }
+                @media (min-width:770px) {
+                    .smallFarms__shops-contact-text{
+                        width: auto;
+                        font-size: 10px;
+                        @include flexParent(row,wrap,flex-start,center)
+                    }
+                }
+                @media (min-width:1200px) {
+                    .smallFarms__shops-contact-text{
+                      
+                        font-size: 15px;
+                        
+                    }
+                }
+              
+                
+
+
+            }
+            @media (min-width:770px) {
+                .smallFarms__shops-contact-element{
+                    width: 50%;
+                }
+            }
+     
+
+        }
+        @media (min-width:770px) {
+            .smallFarms__shops-contact-container{
+                @include flexParent(row,wrap,space-between,center);
+                // padding:0 20px;
+               
+            }
+        }
+
+        .smallFarms__shops-button {
+            margin-top: 15px;
+            width: 100%;
+
+            .agrii__button-container {
+                height: 40px;
+                width: 200px;
+                display: block;
+                margin: 0 auto;
+
+
+
+                .agrii__button {
+                    background-color: $main-color;
+                    margin: 0 auto;
+
+                    // .agrii__button-text {}
+                }
+            }
+        }
+
+        .agrii__button-container::after {
+            border: 1px $main-color solid;
+
+        }
+    }
+    @media (min-width:770px) {
+        .smallFarms__shops-element{
+            max-width: 400px;
+            
+        }
+    }
+    @media (min-width:1200px) {
+        .smallFarms__shops-element{
+            max-width: 49%;
+            width:49%;
+            
+        }
+    }
+    .smallFarms__shops-element--self{
+        border-top: $main-color 4px solid;
+    }
+    .smallFarms__shops-element.active{
+        display: block;
+    }
+}
+@media (min-width:1200px) {
+    .smallFarms__shops-container{
+        @include flexParent(row,wrap,space-between,center);
+    }
+}
+

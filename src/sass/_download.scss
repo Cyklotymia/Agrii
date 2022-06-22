@@ -1,0 +1,89 @@
+.download {
+    display: none;
+
+    .download__container {
+@include flexParent(row,wrap,flex-start,center);
+margin-top: 20px;
+        .download__element {
+            font-size: 11px;
+            font-weight: $weight-bold;
+            height: 70px;
+            @include flexParent(row, nowrap, flex-start, center);
+            min-width: 400px;
+            width: 45%;
+            margin-bottom: 20px;
+            margin-right: 50px;
+
+            .download__element-icon {
+                height: 85%;
+                border: 1px solid $border-color;
+                border-right: none;
+                @include flexParent(row, nowrap, center, center);
+                width: 50px;
+
+                .icon-icon_26 {
+                    color: $main-color;
+                    font-size: 25px;
+                }
+            }
+
+            .download__element-text {
+                height: 85%;
+                border: 1px solid $border-color;
+                border-right: none;
+                @include flexParent(row, nowrap, flex-start, center);
+                width: 50%;
+                font-family: $font-family-F;
+                padding-left: 10px;
+
+            }
+
+            .download__element-button {
+                height: 85%;
+                width: 200px;
+                padding: 0 10px;
+                @include flexParent(row, nowrap, space-between, center);
+                border: 1px solid $border-color;
+
+                .download__element-button-text {
+                    font-weight: $weight-medium;
+                    margin-right: 10px;
+                    border: none;
+                    height: auto;
+                    font-family: $font-family-F;
+                    min-width: 70px;
+                }
+
+                .agrii__button-container {
+                    height: 40px;
+                    width: 120px;
+
+                    .agrii__button {
+                        background-color: $main-color;
+                        padding: 0 5px 0 0;
+
+                        .agrii__button-text {
+                            margin-right: 20px;
+                        }
+
+                        .agrii__button-icon {
+                            .icon-icon_05 {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .agrii__button-container::after {
+                    border-color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:770px) {
+    .download {
+        display: block;
+    }
+}

@@ -1,0 +1,160 @@
+.bigFarms__map-container{
+    
+    .bigFarms__map {
+        cursor: pointer;
+        width: 90%;
+        max-width: 614px;
+
+        .mapSouth,.mapAle {           
+            rect {
+                fill: #dddddd;
+                transition: .5s all;
+                stroke: transparent ;
+                stroke-width: 2px;
+            }
+            rect.red{
+                fill: red;
+            } 
+        }
+
+        .mapSouth:hover rect {
+            fill: #c2c2c2;
+        }
+        .mapAle:hover rect {
+            fill: #c2c2c2;
+        }
+        .mapAle:hover rect.red {
+            fill: red;
+        }
+       
+        
+        .mapBia,.mapPsz{
+            rect{
+                 fill: #a5a1a1;;
+                 transition: .5s all;
+                stroke: transparent ;
+                stroke-width: 1.5px;
+            }
+            rect.red{
+                fill: red;
+            }
+        }
+        .mapBia:hover rect {
+            fill: #868484;
+        }
+        .mapBia:hover rect.red {
+            fill: red;
+        }
+        .mapPsz:hover rect {
+            fill: #868484;
+        }
+        .mapPsz:hover rect.red {
+            fill: red;
+        }
+
+
+        .mapEast,.mapLeft,.mapLub{
+            rect {
+                fill: #c2c2c2;
+                transition: .5s all;
+                stroke: transparent ;
+                stroke-width: 1.5px;
+            }
+            rect.red{
+                fill: red;
+            }
+        }
+
+        .mapEast:hover rect {
+            fill: #a5a1a1;
+        }
+        
+        .mapLeft:hover rect {
+            fill: #a5a1a1;
+        }
+        .mapLub:hover rect {
+            fill: #a5a1a1;
+        }
+        .mapLub:hover rect.red {
+            fill: #ff0000;
+        }
+
+
+        .mapNorth,.mapRight,.mapOls,.mapPoz {
+            rect {
+                fill: #8bd1e2;
+                transition: .5s all;
+                stroke: transparent ;
+                stroke-width: 1.5px;
+            }
+            rect.red{
+                fill:red
+            }
+            
+        }
+        .mapBia{
+            rect{
+                fill: #a2a2a2;
+            transition: .5s all;
+            stroke: transparent ;
+            stroke-width: 1.5px; 
+            }
+            rect.red{
+                fill:red
+            }
+        }
+
+        .mapNorth:hover rect {
+            fill: #70c7dd;
+        }
+        .mapRight:hover rect {
+            fill: #70c7dd;
+        }
+        .mapOls:hover rect {
+            fill: #70c7dd;
+        }
+        .mapOls:hover rect.red {
+            fill: red
+        }
+        .mapPoz:hover rect {
+            fill: #70c7dd;
+        }
+        .mapPoz:hover rect.red {
+            fill: red
+        }
+
+
+    }
+}
+
+.bigFarms__map--small{
+    path{
+        transition: .5s;
+    }
+    path:hover{
+        fill: $main-color;
+    }
+    path.active{
+        fill: $main-color;
+    }
+}
+
+.svg__text {
+    text-transform: uppercase;
+    fill: white;
+    font-size: 27px;
+    font-weight: $weight-bold;
+    text-shadow: 0 0 6px black;
+    font-family: $font-family-F;
+}
+rect.red{
+    fill:red
+}
+
+@media (min-width:770px) {
+    .bigFarms__map{
+        max-width: 50%;
+       
+    }
+}
+

@@ -1,0 +1,198 @@
+.menu__popups {
+    display: none;
+}
+
+@media (min-width:770px) {
+    .menu__popups {
+        display: block;
+        @include position(absolute, 0, 76px);
+
+        background-color: rgb(255, 255, 255);
+border-bottom: 1px solid #DDDEE2;
+        width: 100vw;
+
+        .wrapper {
+
+            .menu__popups-container {
+                padding: 20px;
+                @include flexParent(row, wrap, space-between, flex-start);
+                display: none;
+                
+
+                .menu__popup-list-container {
+                    font-family: $font-family-F;
+                    width: 33%;
+                    margin-bottom: 10px;
+
+
+                    .menu__popup-list-header-conatiner {
+                        @include flexParent(row, nowrap, flex-start, center);
+                        margin-bottom: 10px;
+
+                        .menu__popup-img-container {
+                            min-height: 30px;
+                            min-width: 30px;
+                            max-height: 30px;
+                            max-width: 30px;
+                            margin-right: 5px;
+                            // .menu__popup-img{
+
+
+                            // }
+                        }
+
+                        .menu__popup-list-header {
+                            font-size: 13px;
+
+                        }
+                    }
+
+                    .menu__popup-list {
+                        padding-left: 35px;
+                        margin-bottom: 10px;
+
+                        .menu__popup-element {
+                            margin: 5px 0;
+
+                            .menu__popup-element-link {
+                                text-decoration: none;
+                                color: black;
+                                font-size: 12px;
+
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+            .menu__popups-container:nth-child(2) {
+
+                .menu__popup-list-container {
+
+                    .menu__popup-list {
+                        padding-left: 0;
+
+                    }
+                }
+            }
+
+            .menu__popups-container:nth-child(3) {
+
+
+
+                .menu__popup-list-header-conatiner {
+                    @include flexParent(row, nowrap, space-between, center);
+                    margin-bottom: 10px;
+
+
+
+
+                }
+            }
+
+            .menu__popups-container.active {
+
+                display: block;
+                @include flexParent(row, wrap, flex-start, flex-start);
+            }
+        }
+    }
+}
+
+@media (min-width:1000px) {
+    .menu__popups {
+        @include position(absolute, 0, 83px);
+
+        .wrapper {
+            .menu__popups-container {
+                .menu__popup-list-container {
+                    width: 23%;
+
+                }
+            }
+
+            .menu__popups-container:nth-child(2) {
+
+                .menu__popup-list-container {
+
+                    .menu__popup-list {
+                        padding-left: 0;
+
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .menu__popups {
+        @include position(absolute, 0, 99px);
+        
+
+        .wrapper {
+            .menu__popups-container {
+                .menu__popup-list-container {
+                    width: 20%;
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1400px) {
+    .menu__popups {
+        @include position(absolute, 0, 99px);
+
+        .wrapper {
+            .menu__popups-container {
+                .menu__popup-list-container {
+                    width: 15%;
+                    margin: 0 10px 20px 10px;
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1700px) {
+    .menu__popups {
+        @include position(absolute, 0, 101px);
+
+        .wrapper {
+            .menu__popups-container {
+                .menu__popup-list-container {
+                    width: 20%;
+
+                    .menu__popup-list-header-conatiner {
+                        .menu__popup-list-header {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .menu__popup-list {
+
+                        .menu__popup-element {
+                            .menu__popup-element-link {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+        }
+    }
+}

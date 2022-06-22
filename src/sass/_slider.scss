@@ -166,26 +166,34 @@
                         height: 100%;
                         z-index: 3;
                         opacity: 0;
+                        
                        
                     }
                 
 
                     @media (min-width:1200px) {
-                        .slide__button{
-                            opacity: 1;
-                            position: static;
-                            display: block;
-                            transform: translateY(25vw);
-                            height: 45px;
-                            width: 200px;
-                        }
+                        // .slide__button-container{
+                            margin-top: 20px;
+                            .slide__button{
+                                opacity: 1;
+                                position: absolute;
+                                display: block;
+                                // transform: translateY(25vw);
+                                height: 45px;
+                                width: 200px;
+                                top: 70%;
+                                left: 15%;
+                                
+                            }
+                        // }
                     }
                     @media (min-width:1600px) {
                         .slide__button{
                             display: block;
-                            transform: translateY(350px);
                             height: 45px;
                             width: 200px;
+                            top: 50%;
+                        
                         }
                     }
                 }

@@ -29,8 +29,8 @@ module.exports = {
       new HtmlWebpackPlugin({
           title: "Agrii",
           filename:"index.html",
-          template:"./html/index.html",
-          chunks:['main']
+          template:"./index.html",
+          chunks:['index']
 
       }),
       new HtmlWebpackPlugin({

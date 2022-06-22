@@ -29,7 +29,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Development",
             filename:"index.html",
-            template:"./html/index.html",
+            template:"./index.html",
             chunks:['main']
 
         }),

@@ -27,9 +27,9 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: "Development",
+            title: "Production",
             filename:"index.html",
-            template:"./html/index.html",
+            template:"./html/main.html",
             chunks:['main']
 
         }),

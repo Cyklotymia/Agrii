@@ -28,8 +28,8 @@ module.exports = {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
           title: "Agrii",
-          filename:"main.html",
-          template:"./html/main.html",
+          filename:"index.html",
+          template:"./html/index.html",
           chunks:['main']
 
       }),
